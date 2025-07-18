@@ -8,6 +8,9 @@ Saha is where I:
 - Learn in public through real-world projects
 - Explore the intersection of code, design, and automation
 
+- This only frontend part of project
+  
+
 ## 🛠 Tech Stack
 - Frontend: HTML, Tailwind CSS, JavaScript, React
 - Backend: Node.js
