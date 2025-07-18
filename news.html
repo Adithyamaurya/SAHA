@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>News - Saha Developer Community</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/news.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+        <div class="header-content">
+          <a href="index.html" class="logo">saha</a>
+
+          <!-- Desktop Navigation -->
+          <nav class="nav-desktop">
+            <ul>
+              <li><a href="explore.html">Explore</a></li>
+              <li><a href="projects.html">Projects</a></li>
+              <li><a href="discussions.html">Discussions</a></li>
+              <li><a class="active" href="news.html">News</a></li>
+            </ul>
+          </nav>
+
+          <!-- Auth Button (Desktop) -->
+          <div class="auth-desktop">
+            <a href="login.html" class="btn btn-primary">
+              <i class="fas fa-sign-in-alt"></i> Account
+            </a>
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <button class="menu-toggle" id="menuToggle">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div class="mobile-menu" id="mobileMenu">
+        <div class="container">
+          <nav class="nav-mobile">
+            <ul>
+              <li><a href="explore.html">Explore</a></li>
+              <li><a href="projects.html">Projects</a></li>
+              <li><a href="discussions.html">Discussions</a></li>
+              <li><a class="active" href="news.html">News</a></li>
+            </ul>
+          </nav>
+
+          <div class="auth-mobile">
+            <a href="login.html" class="btn btn-primary btn-block">
+              <i class="fas fa-sign-in-alt"></i> Account
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- News Hero Section -->
+    <section class="news-hero">
+      <div class="container">
+        <div class="news-hero-content">
+          <h1>Tech News & Updates</h1>
+          <p>
+            Stay informed with the latest news, trends, and updates from the
+            Indian tech ecosystem and global developer community.
+          </p>
+          <div class="news-hero-actions">
+            <div class="news-search">
+              <input
+                type="text"
+                id="searchNews"
+                placeholder="Search news articles..."
+              />
+              <button type="button" id="searchBtn">
+                <i class="fas fa-search"></i>
+              </button>
+            </div>
+            <div class="news-subscribe">
+              <button class="btn btn-outline">
+                <i class="fas fa-bell"></i> Subscribe to Updates
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- News Categories -->
+    <section class="news-categories">
+      <div class="container">
+        <div class="categories-nav">
+          <button class="category-btn active" data-category="all">
+            All News
+          </button>
+          <button class="category-btn" data-category="industry">
+            Industry
+          </button>
+          <button class="category-btn" data-category="startups">
+            Startups
+          </button>
+          <button class="category-btn" data-category="technology">
+            Technology
+          </button>
+          <button class="category-btn" data-category="events">Events</button>
+          <button class="category-btn" data-category="community">
+            Community
+          </button>
+        </div>
+        <div class="news-filters">
+          <div class="filter-group">
+            <label for="sortBy">Sort by:</label>
+            <select id="sortBy">
+              <option value="recent">Most Recent</option>
+              <option value="popular">Most Popular</option>
+              <option value="trending">Trending</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label for="timeFilter">Time:</label>
+            <select id="timeFilter">
+              <option value="all">All Time</option>
+              <option value="today">Today</option>
+              <option value="week">This Week</option>
+              <option value="month">This Month</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- News Main Content -->
+    <section class="news-main">
+      <div class="container">
+        <div class="news-layout">
+          <!-- Featured News -->
+          <div class="featured-news">
+            <div class="featured-news-card" data-category="technology">
+              <div class="featured-news-image">
+                <img
+                  src="https://via.placeholder.com/800x400"
+                  alt="AI Development in India"
+                />
+                <div class="featured-category">Technology</div>
+              </div>
+              <div class="featured-news-content">
+                <h2>
+                  <a href="#article-1"
+                    >India's AI Ecosystem Sees Unprecedented Growth in 2023</a
+                  >
+                </h2>
+                <div class="news-meta">
+                  <span class="news-author">By Rahul Verma</span>
+                  <span class="news-date">June 15, 2023</span>
+                  <span class="news-read-time">8 min read</span>
+                </div>
+                <p class="news-excerpt">
+                  India's artificial intelligence sector has witnessed
+                  remarkable growth in the first half of 2023, with investments
+                  exceeding $2 billion and over 200 new AI startups emerging
+                  across major tech hubs. Government initiatives and private
+                  sector collaboration are driving this expansion...
+                </p>
+                <a href="#article-1" class="btn btn-outline"
+                  >Read Full Article</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- News Grid -->
+          <div class="news-grid">
+            <!-- News Card -->
+            <div class="news-card" data-category="startups">
+              <div class="news-card-image">
+                <img
+                  src="https://via.placeholder.com/400x250"
+                  alt="Startup Funding"
+                />
+                <div class="news-category">Startups</div>
+              </div>
+              <div class="news-card-content">
+                <h3>
+                  <a href="#article-2"
+                    >Indian SaaS Startups Raise $1.2 Billion in Q2 2023</a
+                  >
+                </h3>
+                <div class="news-meta">
+                  <span class="news-author">By Priya Sharma</span>
+                  <span class="news-date">June 10, 2023</span>
+                  <span class="news-read-time">5 min read</span>
+                </div>
+                <p class="news-excerpt">
+                  Indian Software-as-a-Service (SaaS) startups continue to
+                  attract significant funding despite the global economic
+                  slowdown, with investments totaling $1.2 billion in the second
+                  quarter of 2023...
+                </p>
+                <a href="#article-2" class="read-more"
+                  >Read More <i class="fas fa-arrow-right"></i
+                ></a>
+              </div>
+            </div>
+
+            <!-- News Card -->
+            <div class="news-card" data-category="events">
+              <div class="news-card-image">
+                <img
+                  src="https://via.placeholder.com/400x250"
+                  alt="Tech Conference"
+                />
+                <div class="news-category">Events</div>
+              </div>
+              <div class="news-card-content">
+                <h3>
+                  <a href="#article-3"
+                    >TechSummit 2023: India's Largest Developer Conference
+                    Returns to Bangalore</a
+                  >
+                </h3>
+                <div class="news-meta">
+                  <span class="news-author">By Vikram Singh</span>
+                  <span class="news-date">June 8, 2023</span>
+                  <span class="news-read-time">4 min read</span>
+                </div>
+                <p class="news-excerpt">
+                  TechSummit, India's premier developer conference, is set to
+                  return to Bangalore this September with over 200 speakers and
+                  an expected attendance of 10,000+ developers from across the
+                  country...
+                </p>
+                <a href="#article-3" class="read-more"
+                  >Read More <i class="fas fa-arrow-right"></i
+                ></a>
+              </div>
+            </div>
+
+            <!-- News Card -->
+            <div class="news-card" data-category="industry">
+              <div class="news-card-image">
+                <img
+                  src="https://via.placeholder.com/400x250"
+                  alt="Tech Industry"
+                />
+                <div class="news-category">Industry</div>
+              </div>
+              <div class="news-card-content">
+                <h3>
+                  <a href="#article-4"
+                    >IT Sector to Create 150,000 New Jobs in India by End of
+                    2023</a
+                  >
+                </h3>
+                <div class="news-meta">
+                  <span class="news-author">By Arjun Reddy</span>
+                  <span class="news-date">June 5, 2023</span>
+                  <span class="news-read-time">6 min read</span>
+                </div>
+                <p class="news-excerpt">
+                  Despite global tech layoffs, India's IT sector is projected to
+                  create approximately 150,000 new jobs by the end of 2023, with
+                  demand particularly high for professionals skilled in AI,
+                  cloud computing, and cybersecurity...
+                </p>
+                <a href="#article-4" class="read-more"
+                  >Read More <i class="fas fa-arrow-right"></i
+                ></a>
+              </div>
+            </div>
+
+            <!-- News Card -->
+            <div class="news-card" data-category="technology">
+              <div class="news-card-image">
+                <img
+                  src="https://via.placeholder.com/400x250"
+                  alt="Web3 Development"
+                />
+                <div class="news-category">Technology</div>
+              </div>
+              <div class="news-card-content">
+                <h3>
+                  <a href="#article-5"
+                    >Web3 Development Gains Momentum in India's Tech
+                    Ecosystem</a
+                  >
+                </h3>
+                <div class="news-meta">
+                  <span class="news-author">By Neha Gupta</span>
+                  <span class="news-date">June 3, 2023</span>
+                  <span class="news-read-time">7 min read</span>
+                </div>
+                <p class="news-excerpt">
+                  Web3 technologies are seeing increased adoption among Indian
+                  developers and startups, with blockchain, cryptocurrency, and
+                  decentralized applications becoming focal points for
+                  innovation and investment...
+                </p>
+                <a href="#article-5" class="read-more"
+                  >Read More <i class="fas fa-arrow-right"></i
+                ></a>
+              </div>
+            </div>
+
+            <!-- News Card -->
+            <div class="news-card" data-category="community">
+              <div class="news-card-image">
+                <img
+                  src="https://via.placeholder.com/400x250"
+                  alt="Developer Community"
+                />
+                <div class="news-category">Community</div>
+              </div>
+              <div class="news-card-content">
+                <h3>
+                  <a href="#article-6"
+                    >Saha Community Reaches 50,000 Members Milestone</a
+                  >
+                </h3>
+                <div class="news-meta">
+                  <span class="news-author">By Admin Team</span>
+                  <span class="news-date">June 1, 2023</span>
+                  <span class="news-read-time">3 min read</span>
+                </div>
+                <p class="news-excerpt">
+                  The Saha developer community has reached a significant
+                  milestone of 50,000 members, marking a 150% growth over the
+                  past year. This achievement highlights the platform's growing
+                  influence in India's tech ecosystem...
+                </p>
+                <a href="#article-6" class="read-more"
+                  >Read More <i class="fas fa-arrow-right"></i
+                ></a>
+              </div>
+            </div>
+
+            <!-- News Card -->
+            <div class="news-card" data-category="startups">
+              <div class="news-card-image">
+                <img
+                  src="https://via.placeholder.com/400x250"
+                  alt="Startup Acquisition"
+                />
+                <div class="news-category">Startups</div>
+              </div>
+              <div class="news-card-content">
+                <h3>
+                  <a href="#article-7"
+                    >Major Acquisition: TechGiant Acquires Indian AI Startup for
+                    $200 Million</a
+                  >
+                </h3>
+                <div class="news-meta">
+                  <span class="news-author">By Rahul Verma</span>
+                  <span class="news-date">May 28, 2023</span>
+                  <span class="news-read-time">5 min read</span>
+                </div>
+                <p class="news-excerpt">
+                  In one of the largest tech acquisitions of the year, global
+                  technology leader TechGiant has acquired Bangalore-based AI
+                  startup InnovateAI for approximately $200 million,
+                  highlighting the growing value of Indian tech innovation...
+                </p>
+                <a href="#article-7" class="read-more"
+                  >Read More <i class="fas fa-arrow-right"></i
+                ></a>
+              </div>
+            </div>
+
+            <!-- News Card -->
+            <div class="news-card" data-category="technology">
+              <div class="news-card-image">
+                <img
+                  src="https://via.placeholder.com/400x250"
+                  alt="5G Technology"
+                />
+                <div class="news-category">Technology</div>
+              </div>
+              <div class="news-card-content">
+                <h3>
+                  <a href="#article-8"
+                    >5G Rollout Accelerates App Development Opportunities in
+                    Rural India</a
+                  >
+                </h3>
+                <div class="news-meta">
+                  <span class="news-author">By Priya Sharma</span>
+                  <span class="news-date">May 25, 2023</span>
+                  <span class="news-read-time">6 min read</span>
+                </div>
+                <p class="news-excerpt">
+                  The ongoing 5G rollout across India is creating new
+                  opportunities for app developers to address rural market
+                  needs, with agritech, telemedicine, and education emerging as
+                  key sectors for innovation...
+                </p>
+                <a href="#article-8" class="read-more"
+                  >Read More <i class="fas fa-arrow-right"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Load More Button -->
+          <div class="load-more-container">
+            <button id="loadMoreBtn" class="btn btn-outline btn-lg">
+              <i class="fas fa-sync-alt"></i> Load More Articles
+            </button>
+          </div>
+
+          <!-- News Sidebar -->
+          <div class="news-sidebar">
+            <!-- Popular Articles -->
+            <div class="sidebar-card">
+              <h3><i class="fas fa-star"></i> Popular Articles</h3>
+              <ul class="popular-articles">
+                <li>
+                  <a href="#"
+                    >The Rise of Remote Work in India's Tech Industry</a
+                  >
+                  <span class="article-views"
+                    ><i class="fas fa-eye"></i> 4.2K views</span
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    >How Indian Developers Are Contributing to Global Open
+                    Source Projects</a
+                  >
+                  <span class="article-views"
+                    ><i class="fas fa-eye"></i> 3.8K views</span
+                  >
+                </li>
+                <li>
+                  <a href="#">Top Programming Languages in Demand for 2023</a>
+                  <span class="article-views"
+                    ><i class="fas fa-eye"></i> 3.5K views</span
+                  >
+                </li>
+                <li>
+                  <a href="#">The Impact of AI on Software Development Jobs</a>
+                  <span class="article-views"
+                    ><i class="fas fa-eye"></i> 3.1K views</span
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    >Cybersecurity Challenges Facing Indian Startups</a
+                  >
+                  <span class="article-views"
+                    ><i class="fas fa-eye"></i> 2.9K views</span
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <!-- Upcoming Events -->
+            <div class="sidebar-card">
+              <h3><i class="fas fa-calendar-alt"></i> Upcoming Events</h3>
+              <ul class="upcoming-events">
+                <li>
+                  <div class="event-date">
+                    <span class="event-month">JUL</span>
+                    <span class="event-day">15</span>
+                  </div>
+                  <div class="event-details">
+                    <a href="#">Web Development Workshop</a>
+                    <span class="event-location"
+                      ><i class="fas fa-map-marker-alt"></i> Bangalore</span
+                    >
+                  </div>
+                </li>
+                <li>
+                  <div class="event-date">
+                    <span class="event-month">JUL</span>
+                    <span class="event-day">22</span>
+                  </div>
+                  <div class="event-details">
+                    <a href="#">AI & Machine Learning Meetup</a>
+                    <span class="event-location"
+                      ><i class="fas fa-map-marker-alt"></i> Mumbai</span
+                    >
+                  </div>
+                </li>
+                <li>
+                  <div class="event-date">
+                    <span class="event-month">AUG</span>
+                    <span class="event-day">05</span>
+                  </div>
+                  <div class="event-details">
+                    <a href="#">Startup Funding Masterclass</a>
+                    <span class="event-location"
+                      ><i class="fas fa-map-marker-alt"></i> Delhi</span
+                    >
+                  </div>
+                </li>
+                <li>
+                  <div class="event-date">
+                    <span class="event-month">AUG</span>
+                    <span class="event-day">18</span>
+                  </div>
+                  <div class="event-details">
+                    <a href="#">DevOps Conference 2023</a>
+                    <span class="event-location"
+                      ><i class="fas fa-map-marker-alt"></i> Hyderabad</span
+                    >
+                  </div>
+                </li>
+              </ul>
+              <a href="events.html" class="btn btn-outline btn-sm btn-block"
+                >View All Events</a
+              >
+            </div>
+
+            <!-- Newsletter Signup -->
+            <div class="sidebar-card">
+              <h3><i class="fas fa-envelope"></i> Subscribe to Newsletter</h3>
+              <p>
+                Get the latest tech news and updates delivered directly to your
+                inbox.
+              </p>
+              <form id="newsletterForm">
+                <div class="form-group">
+                  <input
+                    type="email"
+                    id="newsletterEmail"
+                    placeholder="Your email address"
+                  />
+                </div>
+                <div class="form-group">
+                  <select id="newsletterFrequency">
+                    <option value="daily">Daily Digest</option>
+                    <option value="weekly">Weekly Roundup</option>
+                    <option value="monthly">Monthly Highlights</option>
+                  </select>
+                </div>
+                <button type="submit" class="btn btn-accent btn-block">
+                  <i class="fas fa-paper-plane"></i> Subscribe
+                </button>
+              </form>
+            </div>
+
+            <!-- Tags Cloud -->
+            <div class="sidebar-card">
+              <h3><i class="fas fa-tags"></i> Popular Tags</h3>
+              <div class="tags-cloud">
+                <a href="#" class="tag">AI</a>
+                <a href="#" class="tag">Machine Learning</a>
+                <a href="#" class="tag">Web Development</a>
+                <a href="#" class="tag">Startups</a>
+                <a href="#" class="tag">Funding</a>
+                <a href="#" class="tag">Remote Work</a>
+                <a href="#" class="tag">Cloud Computing</a>
+                <a href="#" class="tag">Blockchain</a>
+                <a href="#" class="tag">Cybersecurity</a>
+                <a href="#" class="tag">Mobile Development</a>
+                <a href="#" class="tag">Career</a>
+                <a href="#" class="tag">DevOps</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-about">
+            <a href="index.html" class="footer-logo">saha</a>
+            <p>
+              A community platform for indie coders and developers across India
+              to share startup ideas, collaborate on projects, and discuss
+              technical concepts.
+            </p>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-github"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+              <a href="#"><i class="fas fa-envelope"></i></a>
+            </div>
+          </div>
+
+          <div class="footer-links">
+            <h3>Explore</h3>
+            <ul>
+              <li><a href="explore.html">Explore</a></li>
+              <li><a href="projects.html">Projects</a></li>
+              <li><a href="discussions.html">Discussions</a></li>
+              <li><a href="news.html">News</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-links">
+            <h3>Resources</h3>
+            <ul>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="events.html">Events</a></li>
+              <li><a href="faq.html">FAQ</a></li>
+              <li><a href="guidelines.html">Community Guidelines</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-links">
+            <h3>Legal</h3>
+            <ul>
+              <li><a href="terms.html">Terms of Service</a></li>
+              <li><a href="privacy.html">Privacy Policy</a></li>
+              <li><a href="cookies.html">Cookie Policy</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>
+            &copy; <span id="currentYear"></span> saha. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/news.js"></script>
+  </body>
+</html>

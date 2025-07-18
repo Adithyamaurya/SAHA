@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects - saha Developer Community</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/projects.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+        <div class="header-content">
+          <a href="index.html" class="logo">saha</a>
+
+          <!-- Desktop Navigation -->
+          <nav class="nav-desktop">
+            <ul>
+              <li><a href="explore.html">Explore</a></li>
+              <li><a href="projects.html" class="active">Projects</a></li>
+              <li><a href="discussions.html">Discussions</a></li>
+              <li><a href="news.html">News</a></li>
+            </ul>
+          </nav>
+
+          <!-- Auth Button (Desktop) -->
+          <div class="auth-desktop">
+            <a href="login.html" class="btn btn-primary">
+              <i class="fas fa-sign-in-alt"></i> Account
+            </a>
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <button class="menu-toggle" id="menuToggle">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div class="mobile-menu" id="mobileMenu">
+        <div class="container">
+          <nav class="nav-mobile">
+            <ul>
+              <li><a href="explore.html">Explore</a></li>
+              <li><a href="projects.html" class="active">Projects</a></li>
+              <li><a href="discussions.html">Discussions</a></li>
+              <li><a href="news.html">News</a></li>
+            </ul>
+          </nav>
+
+          <div class="auth-mobile">
+            <a href="login.html" class="btn btn-primary btn-block">
+              <i class="fas fa-sign-in-alt"></i> Account
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Projects Hero Section -->
+    <section class="hero projects-hero">
+      <div class="container">
+        <div class="hero-content">
+          <h1>Community Projects</h1>
+          <p>
+            Discover ongoing projects, contribute to open-source initiatives, or
+            start your own project with the community
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#" class="btn btn-accent btn-lg">
+              Start a Project
+              <i class="fas fa-plus"></i>
+            </a>
+            <a href="#" class="btn btn-outline btn-lg"> Browse All Projects </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Filter Section -->
+    <section class="projects-filter">
+      <div class="container">
+        <div class="filter-container">
+          <div class="search-bar">
+            <input type="text" placeholder="Search projects..." />
+            <button class="btn btn-primary">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+
+          <div class="filter-options">
+            <select class="filter-select">
+              <option value="">All Categories</option>
+              <option value="web">Web Development</option>
+              <option value="mobile">Mobile Apps</option>
+              <option value="ai">AI & Machine Learning</option>
+              <option value="blockchain">Blockchain</option>
+              <option value="iot">IoT</option>
+            </select>
+
+            <select class="filter-select">
+              <option value="">Sort By</option>
+              <option value="newest">Newest</option>
+              <option value="popular">Most Popular</option>
+              <option value="active">Most Active</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Projects Section -->
+    <section class="featured-projects">
+      <div class="container">
+        <h2 class="section-title">Featured Projects</h2>
+
+        <div class="projects-grid">
+          <!-- Project Card 1 -->
+          <div class="project-card">
+            <div class="project-header">
+              <img
+                src="https://via.placeholder.com/600x300"
+                alt="Project Image"
+              />
+            </div>
+            <div class="project-body">
+              <h3>Rural Healthcare Connect</h3>
+              <p class="project-meta">by Arjun Mehta • 12 contributors</p>
+              <p class="project-description">
+                A telemedicine platform connecting rural communities with
+                healthcare professionals across India.
+              </p>
+              <div class="tags">
+                <span class="tag"><i class="fas fa-tag"></i> Healthcare</span>
+                <span class="tag"><i class="fas fa-tag"></i> Mobile</span>
+                <span class="tag"
+                  ><i class="fas fa-tag"></i> Social Impact</span
+                >
+              </div>
+            </div>
+            <div class="project-footer">
+              <div class="project-stats">
+                <span><i class="fas fa-star"></i> 48</span>
+                <span><i class="fas fa-code-branch"></i> 15</span>
+              </div>
+              <a href="project-detail.html" class="btn btn-outline"
+                >View Project</a
+              >
+            </div>
+          </div>
+
+          <!-- Project Card 2 -->
+          <div class="project-card">
+            <div class="project-header">
+              <img
+                src="https://via.placeholder.com/600x300"
+                alt="Project Image"
+              />
+            </div>
+            <div class="project-body">
+              <h3>EduTech Platform</h3>
+              <p class="project-meta">by Priya Sharma • 8 contributors</p>
+              <p class="project-description">
+                An open-source education platform with content in multiple
+                Indian languages for K-12 students.
+              </p>
+              <div class="tags">
+                <span class="tag"><i class="fas fa-tag"></i> Education</span>
+                <span class="tag"><i class="fas fa-tag"></i> Web</span>
+                <span class="tag"><i class="fas fa-tag"></i> Open Source</span>
+              </div>
+            </div>
+            <div class="project-footer">
+              <div class="project-stats">
+                <span><i class="fas fa-star"></i> 36</span>
+                <span><i class="fas fa-code-branch"></i> 12</span>
+              </div>
+              <a href="project-detail.html" class="btn btn-outline"
+                >View Project</a
+              >
+            </div>
+          </div>
+
+          <!-- Project Card 3 -->
+          <div class="project-card">
+            <div class="project-header">
+              <img
+                src="https://via.placeholder.com/600x300"
+                alt="Project Image"
+              />
+            </div>
+            <div class="project-body">
+              <h3>Urban Farming Assistant</h3>
+              <p class="project-meta">by Vikram Singh • 5 contributors</p>
+              <p class="project-description">
+                IoT-based solution to help urban residents grow food efficiently
+                in limited spaces.
+              </p>
+              <div class="tags">
+                <span class="tag"><i class="fas fa-tag"></i> IoT</span>
+                <span class="tag"><i class="fas fa-tag"></i> Agriculture</span>
+                <span class="tag"
+                  ><i class="fas fa-tag"></i> Sustainability</span
+                >
+              </div>
+            </div>
+            <div class="project-footer">
+              <div class="project-stats">
+                <span><i class="fas fa-star"></i> 29</span>
+                <span><i class="fas fa-code-branch"></i> 7</span>
+              </div>
+              <a href="project-detail.html" class="btn btn-outline"
+                >View Project</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Recent Projects Section -->
+    <section class="recent-projects">
+      <div class="container">
+        <h2 class="section-title">Recent Projects</h2>
+
+        <div class="projects-grid">
+          <!-- More project cards would go here -->
+          <!-- Project Card 4 -->
+          <div class="project-card">
+            <div class="project-header">
+              <img
+                src="https://via.placeholder.com/600x300"
+                alt="Project Image"
+              />
+            </div>
+            <div class="project-body">
+              <h3>Local Artisan Marketplace</h3>
+              <p class="project-meta">by Neha Gupta • 3 contributors</p>
+              <p class="project-description">
+                E-commerce platform connecting local artisans directly with
+                customers worldwide.
+              </p>
+              <div class="tags">
+                <span class="tag"><i class="fas fa-tag"></i> E-commerce</span>
+                <span class="tag"><i class="fas fa-tag"></i> Web</span>
+              </div>
+            </div>
+            <div class="project-footer">
+              <div class="project-stats">
+                <span><i class="fas fa-star"></i> 18</span>
+                <span><i class="fas fa-code-branch"></i> 4</span>
+              </div>
+              <a href="project-detail.html" class="btn btn-outline"
+                >View Project</a
+              >
+            </div>
+          </div>
+
+          <!-- Project Card 5 -->
+          <div class="project-card">
+            <div class="project-header">
+              <img
+                src="https://via.placeholder.com/600x300"
+                alt="Project Image"
+              />
+            </div>
+            <div class="project-body">
+              <h3>Public Transport Tracker</h3>
+              <p class="project-meta">by Rahul Verma • 6 contributors</p>
+              <p class="project-description">
+                Real-time tracking app for public transportation in major Indian
+                cities.
+              </p>
+              <div class="tags">
+                <span class="tag"><i class="fas fa-tag"></i> Mobile</span>
+                <span class="tag"
+                  ><i class="fas fa-tag"></i> Transportation</span
+                >
+                <span class="tag"><i class="fas fa-tag"></i> Maps</span>
+              </div>
+            </div>
+            <div class="project-footer">
+              <div class="project-stats">
+                <span><i class="fas fa-star"></i> 22</span>
+                <span><i class="fas fa-code-branch"></i> 9</span>
+              </div>
+              <a href="project-detail.html" class="btn btn-outline"
+                >View Project</a
+              >
+            </div>
+          </div>
+
+          <!-- Project Card 6 -->
+          <div class="project-card">
+            <div class="project-header">
+              <img
+                src="https://via.placeholder.com/600x300"
+                alt="Project Image"
+              />
+            </div>
+            <div class="project-body">
+              <h3>Indie Game Collective</h3>
+              <p class="project-meta">by Aditya Kumar • 4 contributors</p>
+              <p class="project-description">
+                Collaborative platform for indie game developers to share
+                resources and knowledge.
+              </p>
+              <div class="tags">
+                <span class="tag"><i class="fas fa-tag"></i> Gaming</span>
+                <span class="tag"><i class="fas fa-tag"></i> Community</span>
+              </div>
+            </div>
+            <div class="project-footer">
+              <div class="project-stats">
+                <span><i class="fas fa-star"></i> 15</span>
+                <span><i class="fas fa-code-branch"></i> 3</span>
+              </div>
+              <a href="project-detail.html" class="btn btn-outline"
+                >View Project</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="load-more">
+          <button class="btn btn-secondary btn-lg">Load More Projects</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+      <div class="container">
+        <h2>Have a project idea?</h2>
+        <p>
+          Start your own project and invite community members to collaborate
+          with you.
+        </p>
+        <a href="#" class="btn btn-accent btn-lg">Start a Project</a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-about">
+            <a href="index.html" class="footer-logo">saha</a>
+            <p>
+              A community platform for indie coders and developers across India
+              to share startup ideas, collaborate on projects, and discuss
+              technical concepts.
+            </p>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-github"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+              <a href="#"><i class="fas fa-envelope"></i></a>
+            </div>
+          </div>
+
+          <div class="footer-links">
+            <h3>Explore</h3>
+            <ul>
+              <li><a href="explore.html">Explore</a></li>
+              <li><a href="projects.html">Projects</a></li>
+              <li><a href="discussions.html">Discussions</a></li>
+              <li><a href="news.html">News</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-links">
+            <h3>Resources</h3>
+            <ul>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="events.html">Events</a></li>
+              <li><a href="faq.html">FAQ</a></li>
+              <li><a href="guidelines.html">Community Guidelines</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-links">
+            <h3>Legal</h3>
+            <ul>
+              <li><a href="terms.html">Terms of Service</a></li>
+              <li><a href="privacy.html">Privacy Policy</a></li>
+              <li><a href="cookies.html">Cookie Policy</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>
+            &copy; <span id="currentYear"></span> saha. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/projects.js"></script>
+    <script>
+      // Set current year in footer
+      document.getElementById("currentYear").textContent =
+        new Date().getFullYear();
+
+      // Mobile menu toggle
+      document
+        .getElementById("menuToggle")
+        .addEventListener("click", function () {
+          document.getElementById("mobileMenu").classList.toggle("active");
+          this.classList.toggle("active");
+        });
+    </script>
+  </body>
+</html>

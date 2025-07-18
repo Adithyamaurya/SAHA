@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Discussions - Saha Developer Community</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/discussions.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+        <div class="header-content">
+          <a href="index.html" class="logo">saha</a>
+
+          <!-- Desktop Navigation -->
+          <nav class="nav-desktop">
+            <ul>
+              <li><a href="explore.html">Explore</a></li>
+              <li><a href="projects.html">Projects</a></li>
+              <li><a class="active" href="discussions.html">Discussions</a></li>
+              <li><a href="news.html">News</a></li>
+            </ul>
+          </nav>
+
+          <!-- Auth Button (Desktop) -->
+          <div class="auth-desktop">
+            <a href="login.html" class="btn btn-primary">
+              <i class="fas fa-sign-in-alt"></i> Account
+            </a>
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <button class="menu-toggle" id="menuToggle">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div class="mobile-menu" id="mobileMenu">
+        <div class="container">
+          <nav class="nav-mobile">
+            <ul>
+              <li><a href="explore.html">Explore</a></li>
+              <li><a href="projects.html">Projects</a></li>
+              <li><a class="active" href="discussions.html">Discussions</a></li>
+              <li><a href="news.html">News</a></li>
+            </ul>
+          </nav>
+
+          <div class="auth-mobile">
+            <a href="login.html" class="btn btn-primary btn-block">
+              <i class="fas fa-sign-in-alt"></i> Account
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Discussions Hero Section -->
+    <section class="discussions-hero">
+      <div class="container">
+        <div class="discussions-hero-content">
+          <h1>Community Discussions</h1>
+          <p>
+            Connect with developers across India, ask questions, share
+            knowledge, and engage in meaningful conversations.
+          </p>
+          <div class="discussions-hero-actions">
+            <a href="#new-discussion" class="btn btn-accent btn-lg">
+              <i class="fas fa-plus-circle"></i> Start a Discussion
+            </a>
+            <div class="discussions-search">
+              <input
+                type="text"
+                id="searchDiscussions"
+                placeholder="Search discussions..."
+              />
+              <button type="button" id="searchBtn">
+                <i class="fas fa-search"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Discussions Categories -->
+    <section class="discussions-categories">
+      <div class="container">
+        <div class="categories-nav">
+          <button class="category-btn active" data-category="all">
+            All Topics
+          </button>
+          <button class="category-btn" data-category="tech">Technology</button>
+          <button class="category-btn" data-category="career">Career</button>
+          <button class="category-btn" data-category="projects">
+            Projects
+          </button>
+          <button class="category-btn" data-category="startups">
+            Startups
+          </button>
+          <button class="category-btn" data-category="events">Events</button>
+          <button class="category-btn" data-category="general">General</button>
+        </div>
+        <div class="discussions-filters">
+          <div class="filter-group">
+            <label for="sortBy">Sort by:</label>
+            <select id="sortBy">
+              <option value="recent">Most Recent</option>
+              <option value="popular">Most Popular</option>
+              <option value="active">Most Active</option>
+              <option value="unanswered">Unanswered</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label for="timeFilter">Time:</label>
+            <select id="timeFilter">
+              <option value="all">All Time</option>
+              <option value="today">Today</option>
+              <option value="week">This Week</option>
+              <option value="month">This Month</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Discussions Main Content -->
+    <section class="discussions-main">
+      <div class="container">
+        <div class="discussions-layout">
+          <!-- Discussions List -->
+          <div class="discussions-list">
+            <!-- Discussion Item -->
+            <div class="discussion-item" data-category="tech">
+              <div class="discussion-votes">
+                <button class="vote-btn upvote">
+                  <i class="fas fa-chevron-up"></i>
+                </button>
+                <span class="vote-count">42</span>
+                <button class="vote-btn downvote">
+                  <i class="fas fa-chevron-down"></i>
+                </button>
+              </div>
+              <div class="discussion-content">
+                <div class="discussion-header">
+                  <h3>
+                    <a href="#discussion-1"
+                      >What's the best tech stack for building a scalable
+                      e-commerce platform in 2023?</a
+                    >
+                  </h3>
+                  <div class="discussion-tags">
+                    <span class="tag">Web Development</span>
+                    <span class="tag">E-commerce</span>
+                    <span class="tag">Scalability</span>
+                  </div>
+                </div>
+                <div class="discussion-meta">
+                  <div class="discussion-author">
+                    <img
+                      src="https://via.placeholder.com/32"
+                      alt="Rahul Verma"
+                    />
+                    <span>Posted by <a href="#">Rahul Verma</a></span>
+                  </div>
+                  <div class="discussion-stats">
+                    <span><i class="fas fa-comment"></i> 18 replies</span>
+                    <span><i class="fas fa-eye"></i> 156 views</span>
+                    <span><i class="fas fa-clock"></i> 2 hours ago</span>
+                  </div>
+                </div>
+                <div class="discussion-preview">
+                  <p>
+                    I'm planning to build an e-commerce platform that can handle
+                    high traffic and scale well. I'm considering using Next.js
+                    with a headless CMS, but I'm open to other suggestions. What
+                    tech stack would you recommend for...
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Discussion Item -->
+            <div class="discussion-item" data-category="career">
+              <div class="discussion-votes">
+                <button class="vote-btn upvote">
+                  <i class="fas fa-chevron-up"></i>
+                </button>
+                <span class="vote-count">35</span>
+                <button class="vote-btn downvote">
+                  <i class="fas fa-chevron-down"></i>
+                </button>
+              </div>
+              <div class="discussion-content">
+                <div class="discussion-header">
+                  <h3>
+                    <a href="#discussion-2"
+                      >How to transition from frontend to full-stack
+                      development?</a
+                    >
+                  </h3>
+                  <div class="discussion-tags">
+                    <span class="tag">Career</span>
+                    <span class="tag">Full-Stack</span>
+                    <span class="tag">Learning</span>
+                  </div>
+                </div>
+                <div class="discussion-meta">
+                  <div class="discussion-author">
+                    <img
+                      src="https://via.placeholder.com/32"
+                      alt="Priya Sharma"
+                    />
+                    <span>Posted by <a href="#">Priya Sharma</a></span>
+                  </div>
+                  <div class="discussion-stats">
+                    <span><i class="fas fa-comment"></i> 24 replies</span>
+                    <span><i class="fas fa-eye"></i> 210 views</span>
+                    <span><i class="fas fa-clock"></i> 1 day ago</span>
+                  </div>
+                </div>
+                <div class="discussion-preview">
+                  <p>
+                    I've been working as a frontend developer for 2 years now,
+                    primarily with React. I want to expand my skills and become
+                    a full-stack developer. What's the best approach to learn
+                    backend technologies? Should I focus on Node.js since I
+                    already know JavaScript, or...
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Discussion Item -->
+            <div class="discussion-item" data-category="startups">
+              <div class="discussion-votes">
+                <button class="vote-btn upvote">
+                  <i class="fas fa-chevron-up"></i>
+                </button>
+                <span class="vote-count">28</span>
+                <button class="vote-btn downvote">
+                  <i class="fas fa-chevron-down"></i>
+                </button>
+              </div>
+              <div class="discussion-content">
+                <div class="discussion-header">
+                  <h3>
+                    <a href="#discussion-3"
+                      >Bootstrapping vs VC funding for tech startups in India</a
+                    >
+                  </h3>
+                  <div class="discussion-tags">
+                    <span class="tag">Startups</span>
+                    <span class="tag">Funding</span>
+                    <span class="tag">Entrepreneurship</span>
+                  </div>
+                </div>
+                <div class="discussion-meta">
+                  <div class="discussion-author">
+                    <img
+                      src="https://via.placeholder.com/32"
+                      alt="Vikram Singh"
+                    />
+                    <span>Posted by <a href="#">Vikram Singh</a></span>
+                  </div>
+                  <div class="discussion-stats">
+                    <span><i class="fas fa-comment"></i> 32 replies</span>
+                    <span><i class="fas fa-eye"></i> 245 views</span>
+                    <span><i class="fas fa-clock"></i> 3 days ago</span>
+                  </div>
+                </div>
+                <div class="discussion-preview">
+                  <p>
+                    I'm at a crossroads with my SaaS startup. We've been
+                    bootstrapping for a year and have a decent product with some
+                    early customers, but growth is slow. I'm considering seeking
+                    VC funding to accelerate, but I'm concerned about...
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Discussion Item -->
+            <div class="discussion-item" data-category="tech">
+              <div class="discussion-votes">
+                <button class="vote-btn upvote">
+                  <i class="fas fa-chevron-up"></i>
+                </button>
+                <span class="vote-count">19</span>
+                <button class="vote-btn downvote">
+                  <i class="fas fa-chevron-down"></i>
+                </button>
+              </div>
+              <div class="discussion-content">
+                <div class="discussion-header">
+                  <h3>
+                    <a href="#discussion-4"
+                      >Implementing AI features in mobile apps: Best practices
+                      and libraries</a
+                    >
+                  </h3>
+                  <div class="discussion-tags">
+                    <span class="tag">AI</span>
+                    <span class="tag">Mobile Development</span>
+                    <span class="tag">Machine Learning</span>
+                  </div>
+                </div>
+                <div class="discussion-meta">
+                  <div class="discussion-author">
+                    <img
+                      src="https://via.placeholder.com/32"
+                      alt="Arjun Reddy"
+                    />
+                    <span>Posted by <a href="#">Arjun Reddy</a></span>
+                  </div>
+                  <div class="discussion-stats">
+                    <span><i class="fas fa-comment"></i> 15 replies</span>
+                    <span><i class="fas fa-eye"></i> 178 views</span>
+                    <span><i class="fas fa-clock"></i> 5 days ago</span>
+                  </div>
+                </div>
+                <div class="discussion-preview">
+                  <p>
+                    I'm working on a mobile app that needs to incorporate some
+                    AI features like image recognition and natural language
+                    processing. What are the best libraries and approaches for
+                    implementing these features efficiently on mobile devices?
+                    I'm particularly interested in...
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Discussion Item -->
+            <div class="discussion-item" data-category="projects">
+              <div class="discussion-votes">
+                <button class="vote-btn upvote">
+                  <i class="fas fa-chevron-up"></i>
+                </button>
+                <span class="vote-count">23</span>
+                <button class="vote-btn downvote">
+                  <i class="fas fa-chevron-down"></i>
+                </button>
+              </div>
+              <div class="discussion-content">
+                <div class="discussion-header">
+                  <h3>
+                    <a href="#discussion-5"
+                      >Looking for collaborators on an open-source project for
+                      rural healthcare</a
+                    >
+                  </h3>
+                  <div class="discussion-tags">
+                    <span class="tag">Open Source</span>
+                    <span class="tag">Healthcare</span>
+                    <span class="tag">Collaboration</span>
+                  </div>
+                </div>
+                <div class="discussion-meta">
+                  <div class="discussion-author">
+                    <img
+                      src="https://via.placeholder.com/32"
+                      alt="Neha Gupta"
+                    />
+                    <span>Posted by <a href="#">Neha Gupta</a></span>
+                  </div>
+                  <div class="discussion-stats">
+                    <span><i class="fas fa-comment"></i> 12 replies</span>
+                    <span><i class="fas fa-eye"></i> 134 views</span>
+                    <span><i class="fas fa-clock"></i> 1 week ago</span>
+                  </div>
+                </div>
+                <div class="discussion-preview">
+                  <p>
+                    I'm starting an open-source project aimed at creating a
+                    simple, offline-first healthcare management system for rural
+                    areas with limited connectivity. I'm looking for developers,
+                    designers, and healthcare professionals who might be
+                    interested in collaborating. The tech stack will be...
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pagination -->
+            <div class="discussions-pagination">
+              <button class="pagination-btn" disabled>
+                <i class="fas fa-chevron-left"></i> Previous
+              </button>
+              <div class="pagination-numbers">
+                <button class="pagination-number active">1</button>
+                <button class="pagination-number">2</button>
+                <button class="pagination-number">3</button>
+                <span class="pagination-ellipsis">...</span>
+                <button class="pagination-number">12</button>
+              </div>
+              <button class="pagination-btn">
+                Next <i class="fas fa-chevron-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Sidebar -->
+          <div class="discussions-sidebar">
+            <!-- New Discussion Form -->
+            <div class="sidebar-card" id="new-discussion">
+              <h3><i class="fas fa-plus-circle"></i> Start a New Discussion</h3>
+              <form id="discussionForm">
+                <div class="form-group">
+                  <label for="discussionTitle">Title</label>
+                  <input
+                    type="text"
+                    id="discussionTitle"
+                    placeholder="Enter a descriptive title"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="discussionCategory">Category</label>
+                  <select id="discussionCategory">
+                    <option value="">Select a category</option>
+                    <option value="tech">Technology</option>
+                    <option value="career">Career</option>
+                    <option value="projects">Projects</option>
+                    <option value="startups">Startups</option>
+                    <option value="events">Events</option>
+                    <option value="general">General</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="discussionTags">Tags (comma separated)</label>
+                  <input
+                    type="text"
+                    id="discussionTags"
+                    placeholder="e.g., javascript, react, web development"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="discussionContent">Content</label>
+                  <textarea
+                    id="discussionContent"
+                    rows="6"
+                    placeholder="Describe your question or topic in detail..."
+                  ></textarea>
+                </div>
+                <button type="submit" class="btn btn-accent btn-block">
+                  <i class="fas fa-paper-plane"></i> Post Discussion
+                </button>
+              </form>
+            </div>
+
+            <!-- Popular Topics -->
+            <div class="sidebar-card">
+              <h3><i class="fas fa-fire"></i> Trending Topics</h3>
+              <ul class="trending-topics">
+                <li>
+                  <a href="#">React vs Angular in 2023</a>
+                  <span class="topic-stats">42 replies</span>
+                </li>
+                <li>
+                  <a href="#">Best practices for remote work</a>
+                  <span class="topic-stats">38 replies</span>
+                </li>
+                <li>
+                  <a href="#">Getting started with blockchain development</a>
+                  <span class="topic-stats">35 replies</span>
+                </li>
+                <li>
+                  <a href="#"
+                    >Salary expectations for senior developers in India</a
+                  >
+                  <span class="topic-stats">29 replies</span>
+                </li>
+                <li>
+                  <a href="#">How to prepare for technical interviews</a>
+                  <span class="topic-stats">27 replies</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Top Contributors -->
+            <div class="sidebar-card">
+              <h3><i class="fas fa-award"></i> Top Contributors</h3>
+              <ul class="top-contributors">
+                <li>
+                  <img src="https://via.placeholder.com/40" alt="Rahul Verma" />
+                  <div class="contributor-info">
+                    <a href="#">Rahul Verma</a>
+                    <span>156 contributions</span>
+                  </div>
+                </li>
+                <li>
+                  <img
+                    src="https://via.placeholder.com/40"
+                    alt="Priya Sharma"
+                  />
+                  <div class="contributor-info">
+                    <a href="#">Priya Sharma</a>
+                    <span>142 contributions</span>
+                  </div>
+                </li>
+                <li>
+                  <img
+                    src="https://via.placeholder.com/40"
+                    alt="Vikram Singh"
+                  />
+                  <div class="contributor-info">
+                    <a href="#">Vikram Singh</a>
+                    <span>128 contributions</span>
+                  </div>
+                </li>
+                <li>
+                  <img src="https://via.placeholder.com/40" alt="Neha Gupta" />
+                  <div class="contributor-info">
+                    <a href="#">Neha Gupta</a>
+                    <span>115 contributions</span>
+                  </div>
+                </li>
+                <li>
+                  <img src="https://via.placeholder.com/40" alt="Arjun Reddy" />
+                  <div class="contributor-info">
+                    <a href="#">Arjun Reddy</a>
+                    <span>98 contributions</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Community Guidelines -->
+            <div class="sidebar-card">
+              <h3><i class="fas fa-info-circle"></i> Community Guidelines</h3>
+              <ul class="community-guidelines">
+                <li>
+                  <i class="fas fa-check"></i> Be respectful and inclusive
+                </li>
+                <li>
+                  <i class="fas fa-check"></i> Stay on topic and provide context
+                </li>
+                <li>
+                  <i class="fas fa-check"></i> Share knowledge and help others
+                </li>
+                <li>
+                  <i class="fas fa-check"></i> Avoid duplicate discussions
+                </li>
+                <li><i class="fas fa-check"></i> Use appropriate tags</li>
+              </ul>
+              <a href="guidelines.html" class="btn btn-outline btn-sm btn-block"
+                >Read Full Guidelines</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-about">
+            <a href="index.html" class="footer-logo">saha</a>
+            <p>
+              A community platform for indie coders and developers across India
+              to share startup ideas, collaborate on projects, and discuss
+              technical concepts.
+            </p>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-github"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+              <a href="#"><i class="fas fa-envelope"></i></a>
+            </div>
+          </div>
+
+          <div class="footer-links">
+            <h3>Explore</h3>
+            <ul>
+              <li><a href="explore.html">Explore</a></li>
+              <li><a href="projects.html">Projects</a></li>
+              <li><a href="discussions.html">Discussions</a></li>
+              <li><a href="news.html">News</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-links">
+            <h3>Resources</h3>
+            <ul>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="events.html">Events</a></li>
+              <li><a href="faq.html">FAQ</a></li>
+              <li><a href="guidelines.html">Community Guidelines</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-links">
+            <h3>Legal</h3>
+            <ul>
+              <li><a href="terms.html">Terms of Service</a></li>
+              <li><a href="privacy.html">Privacy Policy</a></li>
+              <li><a href="cookies.html">Cookie Policy</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>
+            &copy; <span id="currentYear"></span> saha. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/discussions.js"></script>
+  </body>
+</html>

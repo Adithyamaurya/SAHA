@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Saha - India's Premier Developer Community</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/landing.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+        <div class="header-content">
+          <a href="index.html" class="logo">saha</a>
+
+          <!-- Desktop Navigation -->
+          <nav class="nav-desktop">
+            <ul>
+              <li><a href="explore.html">Explore</a></li>
+              <li><a href="projects.html">Projects</a></li>
+              <li><a href="discussions.html">Discussions</a></li>
+              <li><a href="news.html">News</a></li>
+            </ul>
+          </nav>
+
+          <!-- Auth Button (Desktop) -->
+          <div class="auth-desktop">
+            <a href="login.html" class="btn btn-primary">
+              <i class="fas fa-sign-in-alt"></i> Account
+            </a>
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <button class="menu-toggle" id="menuToggle">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div class="mobile-menu" id="mobileMenu">
+        <div class="container">
+          <nav class="nav-mobile">
+            <ul>
+              <li><a href="explore.html">Explore</a></li>
+              <li><a href="projects.html">Projects</a></li>
+              <li><a href="discussions.html">Discussions</a></li>
+              <li><a href="news.html">News</a></li>
+            </ul>
+          </nav>
+
+          <div class="auth-mobile">
+            <a href="login.html" class="btn btn-primary btn-block">
+              <i class="fas fa-sign-in-alt"></i> Account
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section with Animation -->
+    <section class="landing-hero">
+      <div class="container">
+        <div class="landing-hero-grid">
+          <div class="landing-hero-content" data-aos="fade-right">
+            <h1>
+              Build Your Future with <span class="gradient-text">Saha</span>
+            </h1>
+            <p class="hero-subtitle">
+              India's most innovative platform for developers to connect,
+              collaborate, and create groundbreaking projects
+            </p>
+            <div class="landing-stats">
+              <div class="landing-stat">
+                <span class="stat-number" id="developerCount">5000+</span>
+                <span class="stat-label">Developers</span>
+              </div>
+              <div class="landing-stat">
+                <span class="stat-number" id="projectCount">1200+</span>
+                <span class="stat-label">Projects</span>
+              </div>
+              <div class="landing-stat">
+                <span class="stat-number" id="ideaCount">3500+</span>
+                <span class="stat-label">Ideas Shared</span>
+              </div>
+            </div>
+            <div class="landing-cta">
+              <a
+                href="signup.html"
+                class="btn btn-accent btn-lg pulse-animation"
+              >
+                Join For Free
+                <i class="fas fa-arrow-right"></i>
+              </a>
+              <a href="#features" class="btn btn-outline btn-lg">
+                Discover Features
+              </a>
+            </div>
+          </div>
+          <div class="landing-hero-image" data-aos="fade-left">
+            <div class="hero-image-container">
+              <img
+                src="https://via.placeholder.com/600x400"
+                alt="Saha Developer Community"
+                class="main-image"
+              />
+              <div class="floating-element code-block">
+                <pre><code>function joinSaha() {
+  return "Amazing Community";
+}</code></pre>
+              </div>
+              <div class="floating-element notification">
+                <i class="fas fa-bell"></i>
+                <span>New collaboration request!</span>
+              </div>
+              <div class="floating-element profile">
+                <img
+                  src="https://via.placeholder.com/50"
+                  alt="Developer Profile"
+                />
+                <span>Priya S.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-shape"></div>
+    </section>
+
+    <!-- Trusted By Section -->
+    <section class="trusted-by">
+      <div class="container">
+        <p class="trusted-by-text">Trusted by developers from</p>
+        <div class="trusted-by-logos">
+          <img
+            src="https://via.placeholder.com/120x40"
+            alt="Google"
+            class="trusted-logo"
+          />
+          <img
+            src="https://via.placeholder.com/120x40"
+            alt="Microsoft"
+            class="trusted-logo"
+          />
+          <img
+            src="https://via.placeholder.com/120x40"
+            alt="Amazon"
+            class="trusted-logo"
+          />
+          <img
+            src="https://via.placeholder.com/120x40"
+            alt="Flipkart"
+            class="trusted-logo"
+          />
+          <img
+            src="https://via.placeholder.com/120x40"
+            alt="Infosys"
+            class="trusted-logo"
+          />
+          <img
+            src="https://via.placeholder.com/120x40"
+            alt="TCS"
+            class="trusted-logo"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="landing-features">
+      <div class="container">
+        <h2 class="section-title" data-aos="fade-up">
+          Powerful Features for Developers
+        </h2>
+
+        <div class="landing-features-grid">
+          <div class="landing-feature-card" data-aos="fade-up">
+            <div class="feature-icon">
+              <i class="fas fa-lightbulb"></i>
+            </div>
+            <h3>Idea Exchange</h3>
+            <p>
+              Share your startup and project ideas with the community. Get
+              valuable feedback and find collaborators.
+            </p>
+          </div>
+
+          <div
+            class="landing-feature-card"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="feature-icon">
+              <i class="fas fa-users"></i>
+            </div>
+            <h3>Team Formation</h3>
+            <p>
+              Find the perfect teammates for your project based on skills,
+              interests, and availability.
+            </p>
+          </div>
+
+          <div
+            class="landing-feature-card"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="feature-icon">
+              <i class="fas fa-code"></i>
+            </div>
+            <h3>Project Showcase</h3>
+            <p>
+              Showcase your work to the community and build your professional
+              portfolio.
+            </p>
+          </div>
+
+          <div
+            class="landing-feature-card"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div class="feature-icon">
+              <i class="fas fa-comments"></i>
+            </div>
+            <h3>Discussion Forums</h3>
+            <p>
+              Engage in technical discussions, solve problems together, and
+              share knowledge.
+            </p>
+          </div>
+
+          <div
+            class="landing-feature-card"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
+            <div class="feature-icon">
+              <i class="fas fa-calendar-alt"></i>
+            </div>
+            <h3>Events & Hackathons</h3>
+            <p>
+              Participate in community events, hackathons, and coding
+              challenges.
+            </p>
+          </div>
+
+          <div
+            class="landing-feature-card"
+            data-aos="fade-up"
+            data-aos-delay="500"
+          >
+            <div class="feature-icon">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+            <h3>Learning Resources</h3>
+            <p>
+              Access curated learning resources, tutorials, and guides shared by
+              the community.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="landing-how-it-works">
+      <div class="container">
+        <h2 class="section-title" data-aos="fade-up">How Saha Works</h2>
+
+        <div class="landing-steps">
+          <div class="landing-step" data-aos="fade-right">
+            <div class="step-number">1</div>
+            <div class="step-content">
+              <h3>Create Your Profile</h3>
+              <p>
+                Sign up and create your developer profile with your skills,
+                interests, and portfolio.
+              </p>
+              <img
+                src="https://via.placeholder.com/400x250"
+                alt="Create Profile"
+                class="step-image"
+              />
+            </div>
+          </div>
+
+          <div class="landing-step" data-aos="fade-left">
+            <div class="step-number">2</div>
+            <div class="step-content">
+              <h3>Explore & Connect</h3>
+              <p>
+                Discover projects, ideas, and connect with developers who share
+                your interests.
+              </p>
+              <img
+                src="https://via.placeholder.com/400x250"
+                alt="Explore and Connect"
+                class="step-image"
+              />
+            </div>
+          </div>
+
+          <div class="landing-step" data-aos="fade-right">
+            <div class="step-number">3</div>
+            <div class="step-content">
+              <h3>Collaborate</h3>
+              <p>
+                Join projects or invite others to collaborate on your ideas and
+                build together.
+              </p>
+              <img
+                src="https://via.placeholder.com/400x250"
+                alt="Collaborate"
+                class="step-image"
+              />
+            </div>
+          </div>
+
+          <div class="landing-step" data-aos="fade-left">
+            <div class="step-number">4</div>
+            <div class="step-content">
+              <h3>Grow & Succeed</h3>
+              <p>
+                Launch your projects, showcase your work, and advance your
+                career.
+              </p>
+              <img
+                src="https://via.placeholder.com/400x250"
+                alt="Grow and Succeed"
+                class="step-image"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="landing-testimonials">
+      <div class="container">
+        <h2 class="section-title" data-aos="fade-up">
+          What Our Community Says
+        </h2>
+
+        <div class="testimonial-carousel" data-aos="fade-up">
+          <div class="testimonial-track">
+            <div class="testimonial-card">
+              <div class="testimonial-quote">
+                <i class="fas fa-quote-left"></i>
+                <p>
+                  "Saha helped me find the perfect team for my startup idea.
+                  We're now building our MVP and couldn't be more excited!"
+                </p>
+              </div>
+              <div class="testimonial-author">
+                <img src="https://via.placeholder.com/60" alt="Priya Sharma" />
+                <div>
+                  <h4>Priya Sharma</h4>
+                  <p>Full Stack Developer, Bangalore</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial-card">
+              <div class="testimonial-quote">
+                <i class="fas fa-quote-left"></i>
+                <p>
+                  "The feedback I received on my project from the Saha community
+                  was invaluable. It helped me refine my approach and build
+                  something truly useful."
+                </p>
+              </div>
+              <div class="testimonial-author">
+                <img src="https://via.placeholder.com/60" alt="Rahul Verma" />
+                <div>
+                  <h4>Rahul Verma</h4>
+                  <p>Mobile Developer, Delhi</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial-card">
+              <div class="testimonial-quote">
+                <i class="fas fa-quote-left"></i>
+                <p>
+                  "As a self-taught developer, Saha has been an incredible
+                  resource for learning and networking. I've made connections
+                  that led to my first tech job!"
+                </p>
+              </div>
+              <div class="testimonial-author">
+                <img src="https://via.placeholder.com/60" alt="Ananya Patel" />
+                <div>
+                  <h4>Ananya Patel</h4>
+                  <p>Frontend Developer, Mumbai</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-controls">
+            <button class="testimonial-prev">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <div class="testimonial-dots">
+              <span class="testimonial-dot active"></span>
+              <span class="testimonial-dot"></span>
+              <span class="testimonial-dot"></span>
+            </div>
+            <button class="testimonial-next">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="landing-cta-section">
+      <div class="container">
+        <div class="landing-cta-content" data-aos="zoom-in">
+          <h2>Ready to join India's most innovative developer community?</h2>
+          <p>
+            Start your journey with Saha today and connect with thousands of
+            developers across the country.
+          </p>
+          <div class="landing-cta-buttons">
+            <a href="signup.html" class="btn btn-accent btn-lg">
+              Join Now
+              <i class="fas fa-rocket"></i>
+            </a>
+            <a href="explore.html" class="btn btn-outline btn-lg">
+              Explore First
+              <i class="fas fa-search"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-about">
+            <a href="index.html" class="footer-logo">saha</a>
+            <p>
+              A community platform for indie coders and developers across India
+              to share startup ideas, collaborate on projects, and discuss
+              technical concepts.
+            </p>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-github"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+              <a href="#"><i class="fas fa-envelope"></i></a>
+            </div>
+          </div>
+
+          <div class="footer-links">
+            <h3>Explore</h3>
+            <ul>
+              <li><a href="explore.html">Explore</a></li>
+              <li><a href="projects.html">Projects</a></li>
+              <li><a href="discussions.html">Discussions</a></li>
+              <li><a href="news.html">News</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-links">
+            <h3>Resources</h3>
+            <ul>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="events.html">Events</a></li>
+              <li><a href="faq.html">FAQ</a></li>
+              <li><a href="guidelines.html">Community Guidelines</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-links">
+            <h3>Legal</h3>
+            <ul>
+              <li><a href="terms.html">Terms of Service</a></li>
+              <li><a href="privacy.html">Privacy Policy</a></li>
+              <li><a href="cookies.html">Cookie Policy</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>
+            &copy; <span id="currentYear"></span> saha. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/landing.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      // Initialize AOS animation library
+      AOS.init({
+        duration: 800,
+        once: true,
+      });
+
+      // Set current year in footer
+      document.getElementById("currentYear").textContent =
+        new Date().getFullYear();
+
+      // Simple testimonial carousel
+      const track = document.querySelector(".testimonial-track");
+      const slides = document.querySelectorAll(".testimonial-card");
+      const dots = document.querySelectorAll(".testimonial-dot");
+      const prevBtn = document.querySelector(".testimonial-prev");
+      const nextBtn = document.querySelector(".testimonial-next");
+      let currentSlide = 0;
+
+      function showSlide(index) {
+        const slideWidth = slides[0].offsetWidth;
+        track.style.transform = `translateX(-${index * slideWidth}px)`;
+
+        dots.forEach((dot) => dot.classList.remove("active"));
+        dots[index].classList.add("active");
+
+        currentSlide = index;
+      }
+
+      prevBtn.addEventListener("click", () => {
+        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+        showSlide(currentSlide);
+      });
+
+      nextBtn.addEventListener("click", () => {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+      });
+
+      dots.forEach((dot, index) => {
+        dot.addEventListener("click", () => {
+          showSlide(index);
+        });
+      });
+
+      // Auto-scroll testimonials
+      setInterval(() => {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+      }, 8000);
+
+      // Animated counter for stats
+      function animateCounter(elementId, target, duration) {
+        const element = document.getElementById(elementId);
+        const start = 0;
+        const increment = Math.ceil(target / (duration / 16));
+        let current = start;
+
+        const timer = setInterval(() => {
+          current += increment;
+          if (current >= target) {
+            current = target;
+            clearInterval(timer);
+          }
+          element.textContent = current + "+";
+        }, 16);
+      }
+
+      // Start animations when elements are in view
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            animateCounter("developerCount", 5000, 2000);
+            animateCounter("projectCount", 1200, 2000);
+            animateCounter("ideaCount", 3500, 2000);
+            observer.unobserve(entry.target);
+          }
+        });
+      });
+
+      observer.observe(document.querySelector(".landing-stats"));
+    </script>
+  </body>
+</html>

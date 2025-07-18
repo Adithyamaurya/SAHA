@@ -1,0 +1,1263 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard & Profile - Saha</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/dashboard.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+        <div class="header-content">
+          <a href="index.html" class="logo">saha</a>
+
+          <!-- Desktop Navigation -->
+          <nav class="nav-desktop">
+            <ul>
+              <li><a href="explore.html">Explore</a></li>
+              <li><a href="projects.html">Projects</a></li>
+              <li><a href="discussions.html">Discussions</a></li>
+              <li><a href="news.html">News</a></li>
+            </ul>
+          </nav>
+
+          <!-- Auth Button (Desktop) -->
+          <div class="auth-desktop">
+            <div class="user-dropdown">
+              <button class="user-dropdown-toggle">
+                <img
+                  src="https://via.placeholder.com/32"
+                  alt="User Avatar"
+                  class="user-avatar"
+                />
+                <span>Rahul Verma</span>
+                <i class="fas fa-chevron-down"></i>
+              </button>
+              <div class="user-dropdown-menu">
+                <a href="dashboard.html" class="active">
+                  <i class="fas fa-tachometer-alt"></i> Dashboard
+                </a>
+                <a href="settings.html">
+                  <i class="fas fa-cog"></i> Settings
+                </a>
+                <a href="index.html">
+                  <i class="fas fa-sign-out-alt"></i> Logout
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <button class="menu-toggle" id="menuToggle">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div class="mobile-menu" id="mobileMenu">
+        <div class="container">
+          <nav class="nav-mobile">
+            <ul>
+              <li><a href="explore.html">Explore</a></li>
+              <li><a href="projects.html">Projects</a></li>
+              <li><a href="discussions.html">Discussions</a></li>
+              <li><a href="news.html">News</a></li>
+            </ul>
+          </nav>
+
+          <div class="auth-mobile">
+            <a href="settings.html" class="btn btn-outline btn-block">
+              <i class="fas fa-cog"></i> Settings
+            </a>
+            <a href="index.html" class="btn btn-primary btn-block">
+              <i class="fas fa-sign-out-alt"></i> Logout
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Dashboard Main Content -->
+    <main class="dashboard-container">
+      <div class="container">
+        <!-- Dashboard Tabs -->
+        <div class="dashboard-tabs">
+          <button class="tab-btn active" data-tab="overview">
+            <i class="fas fa-home"></i> Overview
+          </button>
+          <button class="tab-btn" data-tab="profile">
+            <i class="fas fa-user"></i> Profile
+          </button>
+          <button class="tab-btn" data-tab="projects">
+            <i class="fas fa-code-branch"></i> Projects
+          </button>
+          <button class="tab-btn" data-tab="ideas">
+            <i class="fas fa-lightbulb"></i> Ideas
+          </button>
+          <button class="tab-btn" data-tab="activity">
+            <i class="fas fa-chart-line"></i> Activity
+          </button>
+          <button class="tab-btn" data-tab="connections">
+            <i class="fas fa-users"></i> Connections
+          </button>
+        </div>
+
+        <!-- Dashboard Content -->
+        <div class="dashboard-content">
+          <!-- Overview Tab (Default) -->
+          <div class="tab-content active" id="overview">
+            <div class="dashboard-grid">
+              <!-- Profile Summary Card -->
+              <div class="dashboard-card profile-summary">
+                <div class="profile-header">
+                  <div class="profile-avatar">
+                    <img
+                      src="https://via.placeholder.com/100"
+                      alt="Rahul Verma"
+                    />
+                  </div>
+                  <div class="profile-info">
+                    <h2>Rahul Verma</h2>
+                    <p class="profile-title">Full Stack Developer</p>
+                    <p class="profile-location">
+                      <i class="fas fa-map-marker-alt"></i> Bangalore, India
+                    </p>
+                  </div>
+                  <a
+                    href="#"
+                    class="btn btn-outline btn-sm edit-profile-btn"
+                    data-tab-trigger="profile"
+                  >
+                    <i class="fas fa-edit"></i> Edit Profile
+                  </a>
+                </div>
+                <div class="profile-stats">
+                  <div class="stat">
+                    <span class="stat-value">12</span>
+                    <span class="stat-label">Projects</span>
+                  </div>
+                  <div class="stat">
+                    <span class="stat-value">8</span>
+                    <span class="stat-label">Ideas</span>
+                  </div>
+                  <div class="stat">
+                    <span class="stat-value">156</span>
+                    <span class="stat-label">Connections</span>
+                  </div>
+                </div>
+                <div class="profile-bio">
+                  <p>
+                    Full stack developer with 5 years of experience. Passionate
+                    about building scalable web applications and mentoring
+                    junior developers.
+                  </p>
+                </div>
+                <div class="profile-skills">
+                  <span class="skill-tag">JavaScript</span>
+                  <span class="skill-tag">React</span>
+                  <span class="skill-tag">Node.js</span>
+                  <span class="skill-tag">MongoDB</span>
+                  <span class="skill-tag">AWS</span>
+                  <span class="skill-tag">+5 more</span>
+                </div>
+              </div>
+
+              <!-- Activity Summary Card -->
+              <div class="dashboard-card activity-summary">
+                <div class="card-header">
+                  <h3><i class="fas fa-chart-line"></i> Recent Activity</h3>
+                  <a href="#" class="view-all" data-tab-trigger="activity"
+                    >View All</a
+                  >
+                </div>
+                <div class="activity-list">
+                  <div class="activity-item">
+                    <div class="activity-icon comment">
+                      <i class="fas fa-comment"></i>
+                    </div>
+                    <div class="activity-content">
+                      <p>
+                        You commented on
+                        <a href="#">"AI-powered local language learning app"</a>
+                      </p>
+                      <span class="activity-time">2 hours ago</span>
+                    </div>
+                  </div>
+                  <div class="activity-item">
+                    <div class="activity-icon upvote">
+                      <i class="fas fa-thumbs-up"></i>
+                    </div>
+                    <div class="activity-content">
+                      <p>
+                        You upvoted
+                        <a href="#">"Marketplace for rural artisans"</a>
+                      </p>
+                      <span class="activity-time">Yesterday</span>
+                    </div>
+                  </div>
+                  <div class="activity-item">
+                    <div class="activity-icon project">
+                      <i class="fas fa-code-branch"></i>
+                    </div>
+                    <div class="activity-content">
+                      <p>
+                        You created a new project
+                        <a href="#">"EcoTrack: Sustainability App"</a>
+                      </p>
+                      <span class="activity-time">3 days ago</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Projects Summary Card -->
+              <div class="dashboard-card projects-summary">
+                <div class="card-header">
+                  <h3><i class="fas fa-code-branch"></i> Your Projects</h3>
+                  <a href="#" class="view-all" data-tab-trigger="projects"
+                    >View All</a
+                  >
+                </div>
+                <div class="projects-list">
+                  <div class="project-item">
+                    <div class="project-info">
+                      <h4><a href="#">EcoTrack: Sustainability App</a></h4>
+                      <p>Mobile app to track and reduce carbon footprint</p>
+                      <div class="project-meta">
+                        <span><i class="fas fa-users"></i> 4 members</span>
+                        <span
+                          ><i class="fas fa-calendar-alt"></i> Updated 2 days
+                          ago</span
+                        >
+                      </div>
+                    </div>
+                    <div class="project-progress">
+                      <div class="progress-label">
+                        <span>Progress</span>
+                        <span>65%</span>
+                      </div>
+                      <div class="progress-bar">
+                        <div class="progress" style="width: 65%"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="project-item">
+                    <div class="project-info">
+                      <h4><a href="#">DevMentor: Peer Learning Platform</a></h4>
+                      <p>Platform connecting junior developers with mentors</p>
+                      <div class="project-meta">
+                        <span><i class="fas fa-users"></i> 3 members</span>
+                        <span
+                          ><i class="fas fa-calendar-alt"></i> Updated 1 week
+                          ago</span
+                        >
+                      </div>
+                    </div>
+                    <div class="project-progress">
+                      <div class="progress-label">
+                        <span>Progress</span>
+                        <span>40%</span>
+                      </div>
+                      <div class="progress-bar">
+                        <div class="progress" style="width: 40%"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Ideas Summary Card -->
+              <div class="dashboard-card ideas-summary">
+                <div class="card-header">
+                  <h3><i class="fas fa-lightbulb"></i> Your Ideas</h3>
+                  <a href="#" class="view-all" data-tab-trigger="ideas"
+                    >View All</a
+                  >
+                </div>
+                <div class="ideas-list">
+                  <div class="idea-item">
+                    <h4><a href="#">AI-powered content moderation tool</a></h4>
+                    <p>
+                      Tool to automatically detect and filter inappropriate
+                      content in online communities
+                    </p>
+                    <div class="idea-meta">
+                      <span><i class="fas fa-thumbs-up"></i> 28 upvotes</span>
+                      <span><i class="fas fa-comment"></i> 12 comments</span>
+                      <span
+                        ><i class="fas fa-calendar-alt"></i> Posted 2 weeks
+                        ago</span
+                      >
+                    </div>
+                  </div>
+                  <div class="idea-item">
+                    <h4>
+                      <a href="#"
+                        >Collaborative code editor with AI assistance</a
+                      >
+                    </h4>
+                    <p>
+                      Real-time collaborative editor with AI-powered code
+                      suggestions and error detection
+                    </p>
+                    <div class="idea-meta">
+                      <span><i class="fas fa-thumbs-up"></i> 42 upvotes</span>
+                      <span><i class="fas fa-comment"></i> 18 comments</span>
+                      <span
+                        ><i class="fas fa-calendar-alt"></i> Posted 1 month
+                        ago</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Connections Summary Card -->
+              <div class="dashboard-card connections-summary">
+                <div class="card-header">
+                  <h3><i class="fas fa-users"></i> Recent Connections</h3>
+                  <a href="#" class="view-all" data-tab-trigger="connections"
+                    >View All</a
+                  >
+                </div>
+                <div class="connections-grid">
+                  <div class="connection-item">
+                    <img
+                      src="https://via.placeholder.com/60"
+                      alt="Priya Sharma"
+                    />
+                    <h4>Priya Sharma</h4>
+                    <p>UI/UX Designer</p>
+                    <a href="#" class="btn btn-outline btn-sm">Message</a>
+                  </div>
+                  <div class="connection-item">
+                    <img
+                      src="https://via.placeholder.com/60"
+                      alt="Arjun Reddy"
+                    />
+                    <h4>Arjun Reddy</h4>
+                    <p>Backend Developer</p>
+                    <a href="#" class="btn btn-outline btn-sm">Message</a>
+                  </div>
+                  <div class="connection-item">
+                    <img
+                      src="https://via.placeholder.com/60"
+                      alt="Neha Gupta"
+                    />
+                    <h4>Neha Gupta</h4>
+                    <p>Data Scientist</p>
+                    <a href="#" class="btn btn-outline btn-sm">Message</a>
+                  </div>
+                  <div class="connection-item">
+                    <img
+                      src="https://via.placeholder.com/60"
+                      alt="Vikram Singh"
+                    />
+                    <h4>Vikram Singh</h4>
+                    <p>Mobile Developer</p>
+                    <a href="#" class="btn btn-outline btn-sm">Message</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Profile Tab -->
+          <div class="tab-content" id="profile">
+            <div class="profile-edit-container">
+              <h2>Edit Your Profile</h2>
+              <form class="profile-form">
+                <div class="form-grid">
+                  <div class="form-group profile-avatar-upload">
+                    <div class="current-avatar">
+                      <img
+                        src="https://via.placeholder.com/150"
+                        alt="Profile Avatar"
+                      />
+                    </div>
+                    <div class="avatar-upload-controls">
+                      <label for="avatar-upload" class="btn btn-outline btn-sm">
+                        <i class="fas fa-camera"></i> Change Photo
+                      </label>
+                      <input type="file" id="avatar-upload" hidden />
+                      <button type="button" class="btn btn-text btn-sm">
+                        <i class="fas fa-trash-alt"></i> Remove
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="form-section">
+                    <h3>Basic Information</h3>
+                    <div class="form-row">
+                      <div class="form-group">
+                        <label for="firstName">First Name</label>
+                        <input type="text" id="firstName" value="Rahul" />
+                      </div>
+                      <div class="form-group">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" id="lastName" value="Verma" />
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="headline">Professional Headline</label>
+                      <input
+                        type="text"
+                        id="headline"
+                        value="Full Stack Developer"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label for="location">Location</label>
+                      <input
+                        type="text"
+                        id="location"
+                        value="Bangalore, India"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label for="bio">Bio</label>
+                      <textarea id="bio" rows="4">
+Full stack developer with 5 years of experience. Passionate about building scalable web applications and mentoring junior developers.</textarea
+                      >
+                    </div>
+                  </div>
+
+                  <div class="form-section">
+                    <h3>Contact Information</h3>
+                    <div class="form-group">
+                      <label for="email">Email</label>
+                      <input
+                        type="email"
+                        id="email"
+                        value="rahul.verma@example.com"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label for="phone">Phone</label>
+                      <input type="tel" id="phone" value="+91 9876543210" />
+                    </div>
+                    <div class="form-group">
+                      <label for="website">Website/Portfolio</label>
+                      <input
+                        type="url"
+                        id="website"
+                        value="https://rahulverma.dev"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="form-section">
+                    <h3>Social Profiles</h3>
+                    <div class="form-group">
+                      <label for="github">GitHub</label>
+                      <div class="input-with-icon">
+                        <i class="fab fa-github"></i>
+                        <input
+                          type="url"
+                          id="github"
+                          value="https://github.com/rahulverma"
+                        />
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="linkedin">LinkedIn</label>
+                      <div class="input-with-icon">
+                        <i class="fab fa-linkedin"></i>
+                        <input
+                          type="url"
+                          id="linkedin"
+                          value="https://linkedin.com/in/rahulverma"
+                        />
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="twitter">Twitter</label>
+                      <div class="input-with-icon">
+                        <i class="fab fa-twitter"></i>
+                        <input
+                          type="url"
+                          id="twitter"
+                          value="https://twitter.com/rahulverma"
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-section">
+                    <h3>Skills</h3>
+                    <div class="form-group">
+                      <label for="skills">Your Skills</label>
+                      <div class="skills-input-container">
+                        <div class="skills-tags">
+                          <span class="skill-tag"
+                            >JavaScript
+                            <button type="button" class="remove-skill">
+                              &times;
+                            </button></span
+                          >
+                          <span class="skill-tag"
+                            >React
+                            <button type="button" class="remove-skill">
+                              &times;
+                            </button></span
+                          >
+                          <span class="skill-tag"
+                            >Node.js
+                            <button type="button" class="remove-skill">
+                              &times;
+                            </button></span
+                          >
+                          <span class="skill-tag"
+                            >MongoDB
+                            <button type="button" class="remove-skill">
+                              &times;
+                            </button></span
+                          >
+                          <span class="skill-tag"
+                            >AWS
+                            <button type="button" class="remove-skill">
+                              &times;
+                            </button></span
+                          >
+                          <span class="skill-tag"
+                            >TypeScript
+                            <button type="button" class="remove-skill">
+                              &times;
+                            </button></span
+                          >
+                          <span class="skill-tag"
+                            >Express
+                            <button type="button" class="remove-skill">
+                              &times;
+                            </button></span
+                          >
+                          <span class="skill-tag"
+                            >Docker
+                            <button type="button" class="remove-skill">
+                              &times;
+                            </button></span
+                          >
+                        </div>
+                        <input
+                          type="text"
+                          id="skills"
+                          placeholder="Add a skill..."
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-actions">
+                  <button type="submit" class="btn btn-accent">
+                    Save Changes
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-outline"
+                    data-tab-trigger="overview"
+                  >
+                    Cancel
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <!-- Projects Tab -->
+          <div class="tab-content" id="projects">
+            <div class="projects-container">
+              <div class="projects-header">
+                <h2>Your Projects</h2>
+                <a href="#" class="btn btn-accent">
+                  <i class="fas fa-plus"></i> New Project
+                </a>
+              </div>
+
+              <div class="projects-filters">
+                <div class="filter-group">
+                  <label for="project-status">Status:</label>
+                  <select id="project-status">
+                    <option value="all">All</option>
+                    <option value="active">Active</option>
+                    <option value="completed">Completed</option>
+                    <option value="archived">Archived</option>
+                  </select>
+                </div>
+                <div class="filter-group">
+                  <label for="project-sort">Sort by:</label>
+                  <select id="project-sort">
+                    <option value="recent">Recently Updated</option>
+                    <option value="name">Name</option>
+                    <option value="progress">Progress</option>
+                    <option value="members">Team Size</option>
+                  </select>
+                </div>
+                <div class="search-group">
+                  <input type="text" placeholder="Search projects..." />
+                  <button type="button"><i class="fas fa-search"></i></button>
+                </div>
+              </div>
+
+              <div class="projects-grid">
+                <div class="project-card">
+                  <div class="project-header">
+                    <h3><a href="#">EcoTrack: Sustainability App</a></h3>
+                    <div class="project-actions">
+                      <button class="btn-icon">
+                        <i class="fas fa-ellipsis-v"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <p class="project-description">
+                    Mobile app to track and reduce carbon footprint through
+                    daily activities and challenges.
+                  </p>
+                  <div class="project-progress">
+                    <div class="progress-label">
+                      <span>Progress</span>
+                      <span>65%</span>
+                    </div>
+                    <div class="progress-bar">
+                      <div class="progress" style="width: 65%"></div>
+                    </div>
+                  </div>
+                  <div class="project-meta">
+                    <div class="project-team">
+                      <div class="team-avatars">
+                        <img
+                          src="https://via.placeholder.com/30"
+                          alt="Team Member"
+                        />
+                        <img
+                          src="https://via.placeholder.com/30"
+                          alt="Team Member"
+                        />
+                        <img
+                          src="https://via.placeholder.com/30"
+                          alt="Team Member"
+                        />
+                        <span class="avatar-more">+1</span>
+                      </div>
+                      <span>4 members</span>
+                    </div>
+                    <div class="project-dates">
+                      <span
+                        ><i class="fas fa-calendar-alt"></i> Updated 2 days
+                        ago</span
+                      >
+                    </div>
+                  </div>
+                  <div class="project-tags">
+                    <span class="project-tag">Mobile</span>
+                    <span class="project-tag">React Native</span>
+                    <span class="project-tag">Sustainability</span>
+                  </div>
+                  <div class="project-footer">
+                    <a href="#" class="btn btn-outline btn-sm">View Details</a>
+                    <a href="#" class="btn btn-outline btn-sm">Manage Team</a>
+                  </div>
+                </div>
+
+                <div class="project-card">
+                  <div class="project-header">
+                    <h3><a href="#">DevMentor: Peer Learning Platform</a></h3>
+                    <div class="project-actions">
+                      <button class="btn-icon">
+                        <i class="fas fa-ellipsis-v"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <p class="project-description">
+                    Platform connecting junior developers with mentors for
+                    personalized guidance and skill development.
+                  </p>
+                  <div class="project-progress">
+                    <div class="progress-label">
+                      <span>Progress</span>
+                      <span>40%</span>
+                    </div>
+                    <div class="progress-bar">
+                      <div class="progress" style="width: 40%"></div>
+                    </div>
+                  </div>
+                  <div class="project-meta">
+                    <div class="project-team">
+                      <div class="team-avatars">
+                        <img
+                          src="https://via.placeholder.com/30"
+                          alt="Team Member"
+                        />
+                        <img
+                          src="https://via.placeholder.com/30"
+                          alt="Team Member"
+                        />
+                        <img
+                          src="https://via.placeholder.com/30"
+                          alt="Team Member"
+                        />
+                      </div>
+                      <span>3 members</span>
+                    </div>
+                    <div class="project-dates">
+                      <span
+                        ><i class="fas fa-calendar-alt"></i> Updated 1 week
+                        ago</span
+                      >
+                    </div>
+                  </div>
+                  <div class="project-tags">
+                    <span class="project-tag">Web</span>
+                    <span class="project-tag">Education</span>
+                    <span class="project-tag">React</span>
+                  </div>
+                  <div class="project-footer">
+                    <a href="#" class="btn btn-outline btn-sm">View Details</a>
+                    <a href="#" class="btn btn-outline btn-sm">Manage Team</a>
+                  </div>
+                </div>
+
+                <div class="project-card">
+                  <div class="project-header">
+                    <h3><a href="#">LocalMarket: Neighborhood Commerce</a></h3>
+                    <div class="project-actions">
+                      <button class="btn-icon">
+                        <i class="fas fa-ellipsis-v"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <p class="project-description">
+                    App connecting local vendors with neighborhood customers for
+                    fresh produce and handmade goods.
+                  </p>
+                  <div class="project-progress">
+                    <div class="progress-label">
+                      <span>Progress</span>
+                      <span>85%</span>
+                    </div>
+                    <div class="progress-bar">
+                      <div class="progress" style="width: 85%"></div>
+                    </div>
+                  </div>
+                  <div class="project-meta">
+                    <div class="project-team">
+                      <div class="team-avatars">
+                        <img
+                          src="https://via.placeholder.com/30"
+                          alt="Team Member"
+                        />
+                        <img
+                          src="https://via.placeholder.com/30"
+                          alt="Team Member"
+                        />
+                      </div>
+                      <span>2 members</span>
+                    </div>
+                    <div class="project-dates">
+                      <span
+                        ><i class="fas fa-calendar-alt"></i> Updated 3 days
+                        ago</span
+                      >
+                    </div>
+                  </div>
+                  <div class="project-tags">
+                    <span class="project-tag">Mobile</span>
+                    <span class="project-tag">E-commerce</span>
+                    <span class="project-tag">Flutter</span>
+                  </div>
+                  <div class="project-footer">
+                    <a href="#" class="btn btn-outline btn-sm">View Details</a>
+                    <a href="#" class="btn btn-outline btn-sm">Manage Team</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Ideas Tab -->
+          <div class="tab-content" id="ideas">
+            <div class="ideas-container">
+              <div class="ideas-header">
+                <h2>Your Ideas</h2>
+                <a href="#" class="btn btn-accent">
+                  <i class="fas fa-plus"></i> New Idea
+                </a>
+              </div>
+
+              <div class="ideas-filters">
+                <div class="filter-group">
+                  <label for="idea-status">Status:</label>
+                  <select id="idea-status">
+                    <option value="all">All</option>
+                    <option value="active">Active</option>
+                    <option value="implemented">Implemented</option>
+                    <option value="archived">Archived</option>
+                  </select>
+                </div>
+                <div class="filter-group">
+                  <label for="idea-sort">Sort by:</label>
+                  <select id="idea-sort">
+                    <option value="recent">Recently Posted</option>
+                    <option value="popular">Most Popular</option>
+                    <option value="comments">Most Comments</option>
+                  </select>
+                </div>
+                <div class="search-group">
+                  <input type="text" placeholder="Search ideas..." />
+                  <button type="button"><i class="fas fa-search"></i></button>
+                </div>
+              </div>
+
+              <div class="ideas-list">
+                <div class="idea-card">
+                  <div class="idea-header">
+                    <h3><a href="#">AI-powered content moderation tool</a></h3>
+                    <div class="idea-actions">
+                      <button class="btn-icon">
+                        <i class="fas fa-ellipsis-v"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <p class="idea-description">
+                    Tool to automatically detect and filter inappropriate
+                    content in online communities using machine learning
+                    algorithms.
+                  </p>
+                  <div class="idea-meta">
+                    <span><i class="fas fa-thumbs-up"></i> 28 upvotes</span>
+                    <span><i class="fas fa-comment"></i> 12 comments</span>
+                    <span
+                      ><i class="fas fa-calendar-alt"></i> Posted 2 weeks
+                      ago</span
+                    >
+                  </div>
+                  <div class="idea-tags">
+                    <span class="idea-tag">AI</span>
+                    <span class="idea-tag">Machine Learning</span>
+                    <span class="idea-tag">Content Moderation</span>
+                  </div>
+                  <div class="idea-footer">
+                    <a href="#" class="btn btn-outline btn-sm">View Details</a>
+                    <a href="#" class="btn btn-outline btn-sm"
+                      >Find Collaborators</a
+                    >
+                  </div>
+                </div>
+
+                <div class="idea-card">
+                  <div class="idea-header">
+                    <h3>
+                      <a href="#"
+                        >Collaborative code editor with AI assistance</a
+                      >
+                    </h3>
+                    <div class="idea-actions">
+                      <button class="btn-icon">
+                        <i class="fas fa-ellipsis-v"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <p class="idea-description">
+                    Real-time collaborative editor with AI-powered code
+                    suggestions and error detection for faster and more
+                    efficient coding.
+                  </p>
+                  <div class="idea-meta">
+                    <span><i class="fas fa-thumbs-up"></i> 42 upvotes</span>
+                    <span><i class="fas fa-comment"></i> 18 comments</span>
+                    <span
+                      ><i class="fas fa-calendar-alt"></i> Posted 1 month
+                      ago</span
+                    >
+                  </div>
+                  <div class="idea-tags">
+                    <span class="idea-tag">Collaboration</span>
+                    <span class="idea-tag">AI</span>
+                    <span class="idea-tag">Developer Tools</span>
+                  </div>
+                  <div class="idea-footer">
+                    <a href="#" class="btn btn-outline btn-sm">View Details</a>
+                    <a href="#" class="btn btn-outline btn-sm"
+                      >Find Collaborators</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Activity Tab -->
+          <div class="tab-content" id="activity">
+            <div class="activity-container">
+              <h2>Your Activity</h2>
+
+              <div class="activity-filters">
+                <div class="filter-group">
+                  <label for="activity-type">Type:</label>
+                  <select id="activity-type">
+                    <option value="all">All Activity</option>
+                    <option value="comments">Comments</option>
+                    <option value="projects">Projects</option>
+                    <option value="ideas">Ideas</option>
+                    <option value="connections">Connections</option>
+                  </select>
+                </div>
+                <div class="filter-group">
+                  <label for="activity-time">Time:</label>
+                  <select id="activity-time">
+                    <option value="all">All Time</option>
+                    <option value="today">Today</option>
+                    <option value="week">This Week</option>
+                    <option value="month">This Month</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="activity-timeline">
+                <div class="timeline-date">Today</div>
+
+                <div class="timeline-item">
+                  <div class="timeline-icon comment">
+                    <i class="fas fa-comment"></i>
+                  </div>
+                  <div class="timeline-content">
+                    <div class="timeline-header">
+                      <h4>
+                        You commented on
+                        <a href="#">"AI-powered local language learning app"</a>
+                      </h4>
+                      <span class="timeline-time">2 hours ago</span>
+                    </div>
+                    <div class="timeline-body">
+                      <p>
+                        "This is a great idea! I've been thinking about
+                        something similar. Have you considered integrating
+                        speech recognition for pronunciation practice?"
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="timeline-date">Yesterday</div>
+
+                <div class="timeline-item">
+                  <div class="timeline-icon upvote">
+                    <i class="fas fa-thumbs-up"></i>
+                  </div>
+                  <div class="timeline-content">
+                    <div class="timeline-header">
+                      <h4>
+                        You upvoted
+                        <a href="#">"Marketplace for rural artisans"</a>
+                      </h4>
+                      <span class="timeline-time">Yesterday</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="timeline-item">
+                  <div class="timeline-icon connection">
+                    <i class="fas fa-user-plus"></i>
+                  </div>
+                  <div class="timeline-content">
+                    <div class="timeline-header">
+                      <h4>You connected with <a href="#">Priya Sharma</a></h4>
+                      <span class="timeline-time">Yesterday</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="timeline-date">3 days ago</div>
+
+                <div class="timeline-item">
+                  <div class="timeline-icon project">
+                    <i class="fas fa-code-branch"></i>
+                  </div>
+                  <div class="timeline-content">
+                    <div class="timeline-header">
+                      <h4>
+                        You created a new project
+                        <a href="#">"EcoTrack: Sustainability App"</a>
+                      </h4>
+                      <span class="timeline-time">3 days ago</span>
+                    </div>
+                    <div class="timeline-body">
+                      <p>
+                        Mobile app to track and reduce carbon footprint through
+                        daily activities and challenges.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Connections Tab -->
+          <div class="tab-content" id="connections">
+            <div class="connections-container">
+              <div class="connections-header">
+                <h2>Your Connections</h2>
+                <div class="connections-search">
+                  <input type="text" placeholder="Search connections..." />
+                  <button type="button"><i class="fas fa-search"></i></button>
+                </div>
+              </div>
+
+              <div class="connections-filters">
+                <div class="filter-group">
+                  <label for="connection-sort">Sort by:</label>
+                  <select id="connection-sort">
+                    <option value="recent">Recently Connected</option>
+                    <option value="name">Name</option>
+                    <option value="location">Location</option>
+                  </select>
+                </div>
+                <div class="filter-group">
+                  <label for="connection-filter">Filter by:</label>
+                  <select id="connection-filter">
+                    <option value="all">All Connections</option>
+                    <option value="developers">Developers</option>
+                    <option value="designers">Designers</option>
+                    <option value="managers">Project Managers</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="connections-grid">
+                <div class="connection-card">
+                  <img
+                    src="https://via.placeholder.com/80"
+                    alt="Priya Sharma"
+                    class="connection-avatar"
+                  />
+                  <h3>Priya Sharma</h3>
+                  <p class="connection-title">UI/UX Designer</p>
+                  <p class="connection-location">
+                    <i class="fas fa-map-marker-alt"></i> Mumbai, India
+                  </p>
+                  <div class="connection-skills">
+                    <span class="skill-tag">UI/UX</span>
+                    <span class="skill-tag">Figma</span>
+                    <span class="skill-tag">Adobe XD</span>
+                  </div>
+                  <div class="connection-actions">
+                    <a href="#" class="btn btn-outline btn-sm">View Profile</a>
+                    <a href="#" class="btn btn-accent btn-sm">Message</a>
+                  </div>
+                </div>
+
+                <div class="connection-card">
+                  <img
+                    src="https://via.placeholder.com/80"
+                    alt="Arjun Reddy"
+                    class="connection-avatar"
+                  />
+                  <h3>Arjun Reddy</h3>
+                  <p class="connection-title">Backend Developer</p>
+                  <p class="connection-location">
+                    <i class="fas fa-map-marker-alt"></i> Hyderabad, India
+                  </p>
+                  <div class="connection-skills">
+                    <span class="skill-tag">Node.js</span>
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">MongoDB</span>
+                  </div>
+                  <div class="connection-actions">
+                    <a href="#" class="btn btn-outline btn-sm">View Profile</a>
+                    <a href="#" class="btn btn-accent btn-sm">Message</a>
+                  </div>
+                </div>
+
+                <div class="connection-card">
+                  <img
+                    src="https://via.placeholder.com/80"
+                    alt="Neha Gupta"
+                    class="connection-avatar"
+                  />
+                  <h3>Neha Gupta</h3>
+                  <p class="connection-title">Data Scientist</p>
+                  <p class="connection-location">
+                    <i class="fas fa-map-marker-alt"></i> Bangalore, India
+                  </p>
+                  <div class="connection-skills">
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">Machine Learning</span>
+                    <span class="skill-tag">TensorFlow</span>
+                  </div>
+                  <div class="connection-actions">
+                    <a href="#" class="btn btn-outline btn-sm">View Profile</a>
+                    <a href="#" class="btn btn-accent btn-sm">Message</a>
+                  </div>
+                </div>
+
+                <div class="connection-card">
+                  <img
+                    src="https://via.placeholder.com/80"
+                    alt="Vikram Singh"
+                    class="connection-avatar"
+                  />
+                  <h3>Vikram Singh</h3>
+                  <p class="connection-title">Mobile Developer</p>
+                  <p class="connection-location">
+                    <i class="fas fa-map-marker-alt"></i> Delhi, India
+                  </p>
+                  <div class="connection-skills">
+                    <span class="skill-tag">React Native</span>
+                    <span class="skill-tag">Flutter</span>
+                    <span class="skill-tag">Firebase</span>
+                  </div>
+                  <div class="connection-actions">
+                    <a href="#" class="btn btn-outline btn-sm">View Profile</a>
+                    <a href="#" class="btn btn-accent btn-sm">Message</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-about">
+            <a href="index.html" class="footer-logo">saha</a>
+            <p>
+              A community platform for indie coders and developers across India
+              to share startup ideas, collaborate on projects, and discuss
+              technical concepts.
+            </p>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-github"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+              <a href="#"><i class="fas fa-envelope"></i></a>
+            </div>
+          </div>
+
+          <div class="footer-links">
+            <h3>Explore</h3>
+            <ul>
+              <li><a href="explore.html">Explore</a></li>
+              <li><a href="projects.html">Projects</a></li>
+              <li><a href="discussions.html">Discussions</a></li>
+              <li><a href="news.html">News</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-links">
+            <h3>Resources</h3>
+            <ul>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="events.html">Events</a></li>
+              <li><a href="faq.html">FAQ</a></li>
+              <li><a href="guidelines.html">Community Guidelines</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-links">
+            <h3>Legal</h3>
+            <ul>
+              <li><a href="terms.html">Terms of Service</a></li>
+              <li><a href="privacy.html">Privacy Policy</a></li>
+              <li><a href="cookies.html">Cookie Policy</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>
+            &copy; <span id="currentYear"></span> saha. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/dashboard.js"></script>
+    <script>
+      // Set current year in footer
+      document.getElementById("currentYear").textContent =
+        new Date().getFullYear();
+
+      // Tab switching functionality
+      const tabButtons = document.querySelectorAll(".tab-btn");
+      const tabContents = document.querySelectorAll(".tab-content");
+      const tabTriggers = document.querySelectorAll("[data-tab-trigger]");
+
+      function switchTab(tabId) {
+        // Hide all tab contents
+        tabContents.forEach((content) => {
+          content.classList.remove("active");
+        });
+
+        // Deactivate all tab buttons
+        tabButtons.forEach((button) => {
+          button.classList.remove("active");
+        });
+
+        // Activate the selected tab
+        document.getElementById(tabId).classList.add("active");
+        document.querySelector(`[data-tab="${tabId}"]`).classList.add("active");
+      }
+
+      // Add click event listeners to tab buttons
+      tabButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          const tabId = button.getAttribute("data-tab");
+          switchTab(tabId);
+        });
+      });
+
+      // Add click event listeners to tab triggers
+      tabTriggers.forEach((trigger) => {
+        trigger.addEventListener("click", (e) => {
+          e.preventDefault();
+          const tabId = trigger.getAttribute("data-tab-trigger");
+          switchTab(tabId);
+        });
+      });
+
+      // User dropdown toggle
+      const userDropdownToggle = document.querySelector(
+        ".user-dropdown-toggle"
+      );
+      const userDropdownMenu = document.querySelector(".user-dropdown-menu");
+
+      if (userDropdownToggle) {
+        userDropdownToggle.addEventListener("click", () => {
+          userDropdownMenu.classList.toggle("active");
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener("click", (e) => {
+          if (!e.target.closest(".user-dropdown")) {
+            userDropdownMenu.classList.remove("active");
+          }
+        });
+      }
+
+      // Mobile menu toggle
+      const menuToggle = document.getElementById("menuToggle");
+      const mobileMenu = document.getElementById("mobileMenu");
+
+      if (menuToggle) {
+        menuToggle.addEventListener("click", () => {
+          mobileMenu.classList.toggle("active");
+          menuToggle.classList.toggle("active");
+        });
+      }
+    </script>
+  </body>
+</html>

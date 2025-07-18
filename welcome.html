@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to Saha - Developer Community</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/welcome.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+        <div class="header-content">
+          <a href="index.html" class="logo">saha</a>
+
+          <!-- Desktop Navigation -->
+          <nav class="nav-desktop">
+            <ul>
+              <li><a href="explore.html">Explore</a></li>
+              <li><a href="projects.html">Projects</a></li>
+              <li><a href="discussions.html">Discussions</a></li>
+              <li><a href="news.html">News</a></li>
+            </ul>
+          </nav>
+
+          <!-- Auth Button (Desktop) -->
+          <div class="auth-desktop">
+            <a href="login.html" class="btn btn-primary">
+              <i class="fas fa-sign-in-alt"></i> Account
+            </a>
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <button class="menu-toggle" id="menuToggle">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div class="mobile-menu" id="mobileMenu">
+        <div class="container">
+          <nav class="nav-mobile">
+            <ul>
+              <li><a href="explore.html">Explore</a></li>
+              <li><a href="projects.html">Projects</a></li>
+              <li><a href="discussions.html">Discussions</a></li>
+              <li><a href="news.html">News</a></li>
+            </ul>
+          </nav>
+
+          <div class="auth-mobile">
+            <a href="login.html" class="btn btn-primary btn-block">
+              <i class="fas fa-sign-in-alt"></i> Account
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Welcome Hero Section -->
+    <section class="welcome-hero">
+      <div class="container">
+        <div class="welcome-hero-content animate__animated animate__fadeIn">
+          <h1 class="welcome-title">
+            Welcome to <span class="highlight">Saha</span>
+          </h1>
+          <p class="welcome-subtitle">India's Premier Developer Community</p>
+          <div class="welcome-description">
+            <p>
+              Join thousands of developers, designers, and tech enthusiasts
+              building the future of Indian tech.
+            </p>
+          </div>
+          <div class="welcome-cta">
+            <a
+              href="signup.html"
+              class="btn btn-accent btn-lg animate__animated animate__pulse animate__infinite animate__slower"
+            >
+              Get Started Now
+              <i class="fas fa-arrow-right"></i>
+            </a>
+            <a href="#welcome-features" class="btn btn-outline btn-lg">
+              Learn More
+              <i class="fas fa-chevron-down"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="welcome-hero-shape"></div>
+      <div class="welcome-hero-dots"></div>
+    </section>
+
+    <!-- Welcome Features -->
+    <section id="welcome-features" class="welcome-features">
+      <div class="container">
+        <h2 class="section-title">What Makes Saha Special?</h2>
+
+        <div class="welcome-features-grid">
+          <div class="welcome-feature-card animate__animated animate__fadeInUp">
+            <div class="welcome-feature-icon">
+              <i class="fas fa-users"></i>
+            </div>
+            <h3>Vibrant Community</h3>
+            <p>
+              Connect with passionate developers from across India who share
+              your interests and goals.
+            </p>
+          </div>
+
+          <div
+            class="welcome-feature-card animate__animated animate__fadeInUp"
+            style="animation-delay: 0.2s"
+          >
+            <div class="welcome-feature-icon">
+              <i class="fas fa-lightbulb"></i>
+            </div>
+            <h3>Innovative Ideas</h3>
+            <p>
+              Discover groundbreaking project ideas or share your own to get
+              valuable feedback.
+            </p>
+          </div>
+
+          <div
+            class="welcome-feature-card animate__animated animate__fadeInUp"
+            style="animation-delay: 0.4s"
+          >
+            <div class="welcome-feature-icon">
+              <i class="fas fa-code-branch"></i>
+            </div>
+            <h3>Collaborative Projects</h3>
+            <p>
+              Find collaborators for your next big project or join exciting
+              initiatives already in progress.
+            </p>
+          </div>
+
+          <div
+            class="welcome-feature-card animate__animated animate__fadeInUp"
+            style="animation-delay: 0.6s"
+          >
+            <div class="welcome-feature-icon">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+            <h3>Continuous Learning</h3>
+            <p>
+              Expand your skills through discussions, code reviews, and
+              knowledge sharing with peers.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="welcome-how-it-works">
+      <div class="container">
+        <h2 class="section-title">How Saha Works</h2>
+
+        <div class="welcome-steps">
+          <div class="welcome-step animate__animated animate__fadeInLeft">
+            <div class="welcome-step-number">1</div>
+            <div class="welcome-step-content">
+              <h3>Create Your Profile</h3>
+              <p>
+                Sign up and build your developer profile showcasing your skills,
+                interests, and projects.
+              </p>
+            </div>
+          </div>
+
+          <div class="welcome-step animate__animated animate__fadeInRight">
+            <div class="welcome-step-number">2</div>
+            <div class="welcome-step-content">
+              <h3>Connect & Explore</h3>
+              <p>
+                Browse projects, join discussions, and connect with like-minded
+                developers.
+              </p>
+            </div>
+          </div>
+
+          <div class="welcome-step animate__animated animate__fadeInLeft">
+            <div class="welcome-step-number">3</div>
+            <div class="welcome-step-content">
+              <h3>Collaborate</h3>
+              <p>
+                Join projects that interest you or invite others to collaborate
+                on your ideas.
+              </p>
+            </div>
+          </div>
+
+          <div class="welcome-step animate__animated animate__fadeInRight">
+            <div class="welcome-step-number">4</div>
+            <div class="welcome-step-content">
+              <h3>Build & Grow</h3>
+              <p>
+                Develop your projects, showcase your work, and grow your
+                professional network.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="welcome-testimonials">
+      <div class="container">
+        <h2 class="section-title">What Our Community Says</h2>
+
+        <div class="testimonial-slider">
+          <div class="testimonial-slide">
+            <div class="testimonial-content">
+              <p>
+                "Saha helped me find the perfect team for my startup idea. We're
+                now building our MVP and couldn't be more excited!"
+              </p>
+            </div>
+            <div class="testimonial-author">
+              <img src="https://via.placeholder.com/60" alt="Priya Sharma" />
+              <div class="testimonial-info">
+                <h4>Priya Sharma</h4>
+                <p>Full Stack Developer, Bangalore</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-slide">
+            <div class="testimonial-content">
+              <p>
+                "The feedback I received on my project from the Saha community
+                was invaluable. It helped me refine my approach and build
+                something truly useful."
+              </p>
+            </div>
+            <div class="testimonial-author">
+              <img src="https://via.placeholder.com/60" alt="Rahul Verma" />
+              <div class="testimonial-info">
+                <h4>Rahul Verma</h4>
+                <p>Mobile Developer, Delhi</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-slide">
+            <div class="testimonial-content">
+              <p>
+                "As a self-taught developer, Saha has been an incredible
+                resource for learning and networking. I've made connections that
+                led to my first tech job!"
+              </p>
+            </div>
+            <div class="testimonial-author">
+              <img src="https://via.placeholder.com/60" alt="Ananya Patel" />
+              <div class="testimonial-info">
+                <h4>Ananya Patel</h4>
+                <p>Frontend Developer, Mumbai</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-controls">
+          <button class="testimonial-prev">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <div class="testimonial-dots">
+            <span class="testimonial-dot active"></span>
+            <span class="testimonial-dot"></span>
+            <span class="testimonial-dot"></span>
+          </div>
+          <button class="testimonial-next">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Join Now CTA -->
+    <section class="welcome-cta-section">
+      <div class="container">
+        <div class="welcome-cta-content">
+          <h2>Ready to join India's most innovative developer community?</h2>
+          <p>
+            Start your journey with Saha today and connect with thousands of
+            developers across the country.
+          </p>
+          <div class="welcome-cta-buttons">
+            <a href="signup.html" class="btn btn-accent btn-lg">
+              Join Now
+              <i class="fas fa-rocket"></i>
+            </a>
+            <a href="explore.html" class="btn btn-outline btn-lg">
+              Explore First
+              <i class="fas fa-search"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-about">
+            <a href="index.html" class="footer-logo">saha</a>
+            <p>
+              A community platform for indie coders and developers across India
+              to share startup ideas, collaborate on projects, and discuss
+              technical concepts.
+            </p>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-github"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+              <a href="#"><i class="fas fa-envelope"></i></a>
+            </div>
+          </div>
+
+          <div class="footer-links">
+            <h3>Explore</h3>
+            <ul>
+              <li><a href="explore.html">Explore</a></li>
+              <li><a href="projects.html">Projects</a></li>
+              <li><a href="discussions.html">Discussions</a></li>
+              <li><a href="news.html">News</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-links">
+            <h3>Resources</h3>
+            <ul>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="events.html">Events</a></li>
+              <li><a href="faq.html">FAQ</a></li>
+              <li><a href="guidelines.html">Community Guidelines</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-links">
+            <h3>Legal</h3>
+            <ul>
+              <li><a href="terms.html">Terms of Service</a></li>
+              <li><a href="privacy.html">Privacy Policy</a></li>
+              <li><a href="cookies.html">Cookie Policy</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>
+            &copy; <span id="currentYear"></span> saha. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/welcome.js"></script>
+    <script>
+      // Set current year in footer
+      document.getElementById("currentYear").textContent =
+        new Date().getFullYear();
+
+      // Simple testimonial slider
+      const slides = document.querySelectorAll(".testimonial-slide");
+      const dots = document.querySelectorAll(".testimonial-dot");
+      const prevBtn = document.querySelector(".testimonial-prev");
+      const nextBtn = document.querySelector(".testimonial-next");
+      let currentSlide = 0;
+
+      function showSlide(index) {
+        slides.forEach((slide) => (slide.style.display = "none"));
+        dots.forEach((dot) => dot.classList.remove("active"));
+
+        slides[index].style.display = "block";
+        dots[index].classList.add("active");
+        currentSlide = index;
+      }
+
+      prevBtn.addEventListener("click", () => {
+        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+        showSlide(currentSlide);
+      });
+
+      nextBtn.addEventListener("click", () => {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+      });
+
+      dots.forEach((dot, index) => {
+        dot.addEventListener("click", () => {
+          showSlide(index);
+        });
+      });
+
+      // Initialize slider
+      showSlide(0);
+
+      // Auto-scroll testimonials
+      setInterval(() => {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+      }, 8000);
+
+      // Animate elements when they come into view
+      const animateOnScroll = () => {
+        const elements = document.querySelectorAll(
+          ".welcome-feature-card, .welcome-step"
+        );
+
+        elements.forEach((element) => {
+          const elementPosition = element.getBoundingClientRect().top;
+          const screenPosition = window.innerHeight / 1.3;
+
+          if (elementPosition < screenPosition) {
+            element.style.opacity = "1";
+            element.style.transform = "translateY(0)";
+          }
+        });
+      };
+
+      window.addEventListener("scroll", animateOnScroll);
+      animateOnScroll(); // Run once on page load
+    </script>
+  </body>
+</html>

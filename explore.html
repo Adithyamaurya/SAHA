@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Explore - saha</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+        <div class="header-content">
+          <a href="index.html" class="logo">saha</a>
+
+          <!-- Desktop Navigation -->
+          <nav class="nav-desktop">
+            <ul>
+              <li><a href="explore.html" class="active">Explore</a></li>
+              <li><a href="projects.html">Projects</a></li>
+              <li><a href="discussions.html">Discussions</a></li>
+              <li><a href="news.html">News</a></li>
+            </ul>
+          </nav>
+
+          <!-- Auth Button (Desktop) -->
+          <div class="auth-desktop">
+            <a href="login.html" class="btn btn-primary">
+              <i class="fas fa-sign-in-alt"></i> Account
+            </a>
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <button class="menu-toggle" id="menuToggle">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div class="mobile-menu" id="mobileMenu">
+        <div class="container">
+          <nav class="nav-mobile">
+            <ul>
+              <li><a href="explore.html" class="active">Explore</a></li>
+              <li><a href="projects.html">Projects</a></li>
+              <li><a href="discussions.html">Discussions</a></li>
+              <li><a href="news.html">News</a></li>
+            </ul>
+          </nav>
+
+          <div class="auth-mobile">
+            <a href="login.html" class="btn btn-primary btn-block">
+              <i class="fas fa-sign-in-alt"></i> Account
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <div class="container">
+        <div class="page-header">
+          <div>
+            <h1>Explore</h1>
+            <p>Browse and share startup ideas with the community</p>
+          </div>
+          <a href="submit-idea.html" class="btn btn-primary">
+            <i class="fas fa-plus"></i> Submit Idea
+          </a>
+        </div>
+
+        <div class="explore-layout">
+          <!-- Sidebar with filters -->
+          <aside class="sidebar">
+            <div class="filter-panel">
+              <h2 class="filter-title">
+                <i class="fas fa-filter"></i> Filters
+              </h2>
+
+              <div class="filter-group">
+                <label for="search">Search</label>
+                <input type="text" id="search" placeholder="Search ideas..." />
+              </div>
+
+              <div class="filter-group">
+                <label>Categories</label>
+                <div class="checkbox-group">
+                  <div class="checkbox">
+                    <input type="checkbox" id="ai" />
+                    <label for="ai">AI & Machine Learning</label>
+                  </div>
+                  <div class="checkbox">
+                    <input type="checkbox" id="mobile" />
+                    <label for="mobile">Mobile Apps</label>
+                  </div>
+                  <div class="checkbox">
+                    <input type="checkbox" id="web" />
+                    <label for="web">Web Development</label>
+                  </div>
+                  <div class="checkbox">
+                    <input type="checkbox" id="social" />
+                    <label for="social">Social Impact</label>
+                  </div>
+                  <div class="checkbox">
+                    <input type="checkbox" id="marketplace" />
+                    <label for="marketplace">Marketplace</label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="filter-group">
+                <label for="sort">Sort By</label>
+                <select id="sort">
+                  <option>Most Popular</option>
+                  <option>Newest First</option>
+                  <option>Most Comments</option>
+                  <option>Most Upvotes</option>
+                </select>
+              </div>
+
+              <button class="btn btn-outline btn-block">Apply Filters</button>
+            </div>
+          </aside>
+
+          <!-- Main content -->
+          <div class="main-area">
+            <div class="tabs">
+              <ul class="tab-list" id="ideaTabs">
+                <li class="tab active" data-tab="all">All Ideas</li>
+                <li class="tab" data-tab="trending">Trending</li>
+                <li class="tab" data-tab="recent">Recent</li>
+                <li class="tab" data-tab="following">Following</li>
+              </ul>
+
+              <div class="tab-content active" id="all">
+                <div class="idea-list">
+                  <!-- Idea Card 1 -->
+                  <div class="idea-card">
+                    <div class="idea-header">
+                      <div class="idea-author">
+                        <img
+                          src="https://via.placeholder.com/40"
+                          alt="Priya Sharma"
+                          class="author-avatar"
+                        />
+                        <div>
+                          <h4>Priya Sharma</h4>
+                          <span class="idea-date">Oct 15, 2023</span>
+                        </div>
+                      </div>
+                      <button class="btn-icon">
+                        <i class="far fa-bookmark"></i>
+                      </button>
+                    </div>
+                    <div class="idea-body">
+                      <a href="idea-detail.html">
+                        <h3>AI-powered local language learning app</h3>
+                      </a>
+                      <p>
+                        An app that uses AI to teach programming in regional
+                        Indian languages, making coding accessible to more
+                        people.
+                      </p>
+                      <div class="tags">
+                        <span class="tag"><i class="fas fa-tag"></i> AI</span>
+                        <span class="tag"
+                          ><i class="fas fa-tag"></i> Education</span
+                        >
+                        <span class="tag"
+                          ><i class="fas fa-tag"></i> Mobile</span
+                        >
+                      </div>
+                    </div>
+                    <div class="idea-footer">
+                      <div class="idea-actions">
+                        <button class="btn-action">
+                          <i class="fas fa-thumbs-up"></i>
+                          <span>42</span>
+                        </button>
+                        <button class="btn-action">
+                          <i class="fas fa-comment"></i>
+                          <span>12</span>
+                        </button>
+                      </div>
+                      <button class="btn-action">
+                        <i class="fas fa-share"></i>
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- Idea Card 2 -->
+                  <div class="idea-card">
+                    <div class="idea-header">
+                      <div class="idea-author">
+                        <img
+                          src="https://via.placeholder.com/40"
+                          alt="Rahul Verma"
+                          class="author-avatar"
+                        />
+                        <div>
+                          <h4>Rahul Verma</h4>
+                          <span class="idea-date">Oct 12, 2023</span>
+                        </div>
+                      </div>
+                      <button class="btn-icon">
+                        <i class="far fa-bookmark"></i>
+                      </button>
+                    </div>
+                    <div class="idea-body">
+                      <a href="idea-detail.html">
+                        <h3>Marketplace for rural artisans</h3>
+                      </a>
+                      <p>
+                        A platform connecting rural artisans directly with
+                        global customers, eliminating middlemen and increasing
+                        profits.
+                      </p>
+                      <div class="tags">
+                        <span class="tag"
+                          ><i class="fas fa-tag"></i> Marketplace</span
+                        >
+                        <span class="tag"
+                          ><i class="fas fa-tag"></i> Social Impact</span
+                        >
+                      </div>
+                    </div>
+                    <div class="idea-footer">
+                      <div class="idea-actions">
+                        <button class="btn-action">
+                          <i class="fas fa-thumbs-up"></i>
+                          <span>38</span>
+                        </button>
+                        <button class="btn-action">
+                          <i class="fas fa-comment"></i>
+                          <span>8</span>
+                        </button>
+                      </div>
+                      <button class="btn-action">
+                        <i class="fas fa-share"></i>
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- Idea Card 3 -->
+                  <div class="idea-card">
+                    <div class="idea-header">
+                      <div class="idea-author">
+                        <img
+                          src="https://via.placeholder.com/40"
+                          alt="Ankit Patel"
+                          class="author-avatar"
+                        />
+                        <div>
+                          <h4>Ankit Patel</h4>
+                          <span class="idea-date">Oct 10, 2023</span>
+                        </div>
+                      </div>
+                      <button class="btn-icon">
+                        <i class="far fa-bookmark"></i>
+                      </button>
+                    </div>
+                    <div class="idea-body">
+                      <a href="idea-detail.html">
+                        <h3>Developer-focused job board</h3>
+                      </a>
+                      <p>
+                        A job board specifically for Indian developers with
+                        transparent salary information and remote-friendly
+                        options.
+                      </p>
+                      <div class="tags">
+                        <span class="tag"><i class="fas fa-tag"></i> Jobs</span>
+                        <span class="tag"
+                          ><i class="fas fa-tag"></i> Remote Work</span
+                        >
+                      </div>
+                    </div>
+                    <div class="idea-footer">
+                      <div class="idea-actions">
+                        <button class="btn-action">
+                          <i class="fas fa-thumbs-up"></i>
+                          <span>56</span>
+                        </button>
+                        <button class="btn-action">
+                          <i class="fas fa-comment"></i>
+                          <span>15</span>
+                        </button>
+                      </div>
+                      <button class="btn-action">
+                        <i class="fas fa-share"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="load-more">
+                  <button class="btn btn-outline">Load More</button>
+                </div>
+              </div>
+
+              <div class="tab-content" id="trending">
+                <!-- Trending ideas will be loaded here -->
+              </div>
+
+              <div class="tab-content" id="recent">
+                <!-- Recent ideas will be loaded here -->
+              </div>
+
+              <div class="tab-content" id="following">
+                <div class="login-prompt">
+                  <p>You need to log in to see ideas from people you follow.</p>
+                  <a href="login.html" class="btn btn-primary">Log In</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-about">
+            <a href="index.html" class="footer-logo">saha</a>
+            <p>
+              A community platform for indie coders and developers across India
+              to share startup ideas, collaborate on projects, and discuss
+              technical concepts.
+            </p>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-github"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+              <a href="#"><i class="fas fa-envelope"></i></a>
+            </div>
+          </div>
+
+          <div class="footer-links">
+            <h3>Explore</h3>
+            <ul>
+              <li><a href="explore.html">Explore</a></li>
+              <li><a href="projects.html">Projects</a></li>
+              <li><a href="discussions.html">Discussions</a></li>
+              <li><a href="news.html">News</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-links">
+            <h3>Resources</h3>
+            <ul>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="events.html">Events</a></li>
+              <li><a href="faq.html">FAQ</a></li>
+              <li><a href="guidelines.html">Community Guidelines</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-links">
+            <h3>Legal</h3>
+            <ul>
+              <li><a href="terms.html">Terms of Service</a></li>
+              <li><a href="privacy.html">Privacy Policy</a></li>
+              <li><a href="cookies.html">Cookie Policy</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>
+            &copy; <span id="currentYear"></span> saha. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/explore.js"></script>
+  </body>
+</html>
