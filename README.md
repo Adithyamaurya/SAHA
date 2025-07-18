@@ -8,7 +8,6 @@ Saha is where I:
 - Learn in public through real-world projects
 - Explore the intersection of code, design, and automation
 
-# This only frontend part of project 
 
 ## 🛠 Tech Stack
 - Frontend: HTML, Tailwind CSS, JavaScript, React
@@ -16,3 +15,4 @@ Saha is where I:
 - Database: PostgreSQL / Firebase (based on project)
 
 > 🚧 This project is currently under construction. Stay tuned for updates and releases.
+# This only frontend part of project 
